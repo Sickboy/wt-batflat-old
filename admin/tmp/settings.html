@@ -1,0 +1,113 @@
+<article class="row">
+    <div class="col-md-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">Ustawienia</div>
+            <div class="panel-body">
+        		<form name="user" action="http://77.55.211.142/admin/contact/save?t=ebe52064da61" method="POST">
+        			<div class="form-group">
+    	                <label>Odbiorca</label>
+    	                <select name="user" class="form-control">
+                            <option value="0">-- Własny adres mailowy --</option>
+                                                            <option value="1" selected>admin &lt;admin@localhost&gt;</option>
+                                                            <option value="2" >peel &lt;peel@pl.pl&gt;</option>
+                                                    </select>
+        	        </div>
+                    <div class="form-group collapse" id="mail">
+    	                <label>lub adres e-mail</label>
+                        <input class="form-control" type="email" name="email" value="" placeholder="Przykład: adam@nowak.com">
+                    </div>
+        			<div class="form-group">
+    	                <label>Obowiązkowe pole typu checkbox</label>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="checkbox[switch]" value="0" checked> Nie                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="checkbox[switch]" value="1" > Tak                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group collapse" id="checkbox">
+                        <label>Treść do zaakceptowania</label>
+                        <textarea class="form-control" name="checkbox[content]" rows="4">I agree to the processing of personal data...</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Wybierz sterownik do wysyłania wiadomości</label>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="driver" value="mail" checked> mail() (domyślne)                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="driver" value="phpmailer" > PHPMailer (SMTP)                            </label>
+                        </div>
+                        <div id="phpmailer" class="well well-sm clearfix collapse" style="margin: 15px 0 0 0;">
+                                                        <div class="alert alert-danger">Klasa PHPMailer nie jest zainstalowana. Użyj <code>composer require phpmailer/phpmailer</code> aby zainstalować dodatkowy pakiet.</div>
+                                                        <div class="form-group">
+                                <div class="row">
+                                    <div class="col-xs-10">
+                                        <label>Serwer poczty wychodzącej</label>
+                                        <input type="text" class="form-control" name="phpmailer[server]" value="smtp.example.com">
+                                    </div>
+                                    <div class="col-xs-2">
+                                        <label>Port</label>
+                                        <input type="text" class="form-control" name="phpmailer[port]" value="587">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Nazwa wyświetlana</label>
+                                <input type="text" class="form-control" name="phpmailer[name]" value="Batflat contact">
+                            </div>
+                            <div class="form-group">
+                                <label>Nazwa użytkownika</label>
+                                <input type="text" class="form-control" name="phpmailer[username]" value="login@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Hasło użytkownika</label>
+                                <input type="password" class="form-control" name="phpmailer[password]" value="yourpassword">
+                            </div>
+                        </div>
+                    </div>
+        	        <input type="submit" name="save" class="btn btn-primary" value="Zapisz">
+                </form>
+                <div class="well well-sm clearfix" style="margin: 15px 0 0 0;">
+                    Aby wyświetlić formularz na stronie, wklej tag <strong>*bracket**dollar*contact.form*/bracket*</strong>.
+                    <span class="label label-default pull-right">info</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</article>
+
+<script>
+$('form select[name="user"]').change(function()
+{
+    if($(this).find('option:selected').val() > 0)
+        $('form #mail').slideUp();
+    else
+        $('form #mail').slideDown();
+}).change();
+
+$('form input[name="checkbox[switch]"]').change(function()
+{
+    if($(this).is(':checked'))
+    {
+        if(this.value == 0)
+            $('form #checkbox').slideUp();
+        else
+            $('form #checkbox').slideDown();
+    }
+}).change();
+
+$('form input[name="driver"]').change(function()
+{
+    if($(this).is(':checked'))
+    {
+        if(this.value == 'phpmailer')
+            $('form #phpmailer').slideDown();
+        else
+            $('form #phpmailer').slideUp();
+    }
+}).change();
+</script>

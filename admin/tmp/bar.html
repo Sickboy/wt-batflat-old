@@ -1,0 +1,165 @@
+<section id="devbar">
+    <ul class="navbar clearfix">
+        <li class="logo" data-toggle="tooltip" title="Batflat 1.3.5">
+            <img src="http://77.55.211.142/themes/admin/img/logo.svg?t=d84a810df55a" alt="logo">
+        </li>
+        <li data-toggle="tooltip" title="Status code">
+            <a href="#info" data-toggle="tab">
+                <i class="fa fa-eye"></i> GET 200            </a>
+        </li>
+        <li data-toggle="tooltip" title="Execution time">
+            <span>
+                <i class="fa fa-clock-o"></i> 13.21ms
+            </span>
+        </li>
+        <li data-toggle="tooltip" title="Memory usage">
+            <span>
+                <i class="fa fa-server"></i> 0.68MB
+            </span>
+        </li>
+        <li data-toggle="tooltip" title="Database queries">
+            <a href="#database" data-toggle="tab"><i class="fa fa-database"></i> 7</a>
+        </li>
+        <li data-toggle="tooltip" title="Requests">
+            <a href="#requests" data-toggle="tab"><i class="fa fa-rocket"></i> 1</a>
+        </li>
+        <li data-toggle="tooltip" title="Dump">
+            <a href="#dump" data-toggle="tab"><i class="fa fa-crosshairs"></i> 0</a>
+        </li>
+        <li class="show-hide" data-toggle="collapse" data-target="#devbar-content">
+            <i class="fa"></i>
+        </li>
+    </ul>
+    <div id="devbar-content" class="tab-content collapse">
+        <div id="info" class="tab-pane active">
+            <ul>
+                <li>HTTP status: 200 OK</li>
+                <li>Route: /galleries/edit/1</li>
+                <li>Batflat version: 1.3.5</li>
+                <li>PHP version: 7.0.30-0ubuntu0.16.04.1</li>
+                <li>SQLite version: 3.11.0</li>
+                <li>Batflat modules: dashboard, blog, pages, galleries, navigation, snippets, modules, settings, users, contact, devbar</li>
+                <li>PHP extensions: Core, date, libxml, openssl, pcre, zlib, filter, hash, Reflection, SPL, session, standard, apache2handler, mysqlnd, PDO, xml, calendar, ctype, curl, dom, mbstring, fileinfo, ftp, gd, gettext, iconv, intl, json, exif, mcrypt, mysqli, pdo_mysql, pdo_sqlite, Phar, posix, propro, raphf, readline, shmop, SimpleXML, sockets, sqlite3, sysvmsg, sysvsem, sysvshm, tokenizer, wddx, xmlreader, xmlwriter, xsl, zip, http, Zend OPcache</li>
+            </ul>
+        </div>
+        <div id="database" class="tab-pane">
+            <ul>
+                                <li>SELECT * FROM settings</li>
+                                <li>SELECT * FROM modules ORDER BY sequence ASC</li>
+                                <li>SELECT * FROM users WHERE id = ?</li>
+                                <li>SELECT * FROM galleries WHERE id = ?</li>
+                                <li>SELECT * FROM galleries_items WHERE gallery = ?</li>
+                                <li>SELECT * FROM galleries_items WHERE gallery = ? ORDER BY id DESC LIMIT 0, 10</li>
+                                <li>SELECT * FROM users WHERE id = ?</li>
+                            </ul>
+        </div>
+        <div id="requests" class="tab-pane">
+            <ul>
+                                <li>
+                    <dl class="dl-horizontal">
+                        <dt>$_GET</dt>
+                        <dd><pre class="truncate active">Array
+(
+    [t] => d84a810df55a
+)
+</pre></dd>
+                    </dl>
+                </li>
+                                <li>
+                    <dl class="dl-horizontal">
+                        <dt>$_POST</dt>
+                        <dd><pre class="truncate active">Array
+(
+)
+</pre></dd>
+                    </dl>
+                </li>
+                                <li>
+                    <dl class="dl-horizontal">
+                        <dt>$_COOKIE</dt>
+                        <dd><pre class="truncate active">Array
+(
+    [bat] => 2fnah75u714ij97liacim8goq7
+    [PHPSESSID] => mivsq48kbfu3soa4ooj1stka73
+)
+</pre></dd>
+                    </dl>
+                </li>
+                                <li>
+                    <dl class="dl-horizontal">
+                        <dt>$_SERVER</dt>
+                        <dd><pre class="truncate active">Array
+(
+    [REDIRECT_STATUS] => 200
+    [HTTP_HOST] => 77.55.211.142
+    [HTTP_CONNECTION] => keep-alive
+    [HTTP_CACHE_CONTROL] => max-age=0
+    [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
+    [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Fedora; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
+    [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
+    [HTTP_DNT] => 1
+    [HTTP_REFERER] => http://77.55.211.142/admin/galleries/edit/1?t=d84a810df55a
+    [HTTP_ACCEPT_ENCODING] => gzip, deflate
+    [HTTP_ACCEPT_LANGUAGE] => pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7
+    [HTTP_COOKIE] => bat=2fnah75u714ij97liacim8goq7; PHPSESSID=mivsq48kbfu3soa4ooj1stka73
+    [PATH] => /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+    [SERVER_SIGNATURE] => <address>Apache/2.4.18 (Ubuntu) Server at 77.55.211.142 Port 80</address>
+
+    [SERVER_SOFTWARE] => Apache/2.4.18 (Ubuntu)
+    [SERVER_NAME] => 77.55.211.142
+    [SERVER_ADDR] => 77.55.211.142
+    [SERVER_PORT] => 80
+    [REMOTE_ADDR] => 194.152.53.240
+    [DOCUMENT_ROOT] => /var/www/batflat
+    [REQUEST_SCHEME] => http
+    [CONTEXT_PREFIX] => 
+    [CONTEXT_DOCUMENT_ROOT] => /var/www/batflat
+    [SERVER_ADMIN] => [no address given]
+    [SCRIPT_FILENAME] => /var/www/batflat/admin/index.php
+    [REMOTE_PORT] => 59705
+    [REDIRECT_URL] => /admin/galleries/edit/1
+    [REDIRECT_QUERY_STRING] => t=d84a810df55a
+    [GATEWAY_INTERFACE] => CGI/1.1
+    [SERVER_PROTOCOL] => HTTP/1.1
+    [REQUEST_METHOD] => GET
+    [QUERY_STRING] => t=d84a810df55a
+    [REQUEST_URI] => /admin/galleries/edit/1?t=d84a810df55a
+    [SCRIPT_NAME] => /admin/index.php
+    [PHP_SELF] => /admin/index.php
+    [REQUEST_TIME_FLOAT] => 1530013938.851
+    [REQUEST_TIME] => 1530013938
+    [HTTP_X_FORWARDED_PORT] => 
+    [PATH_INFO] => /admin/galleries/edit/1
+)
+</pre></dd>
+                    </dl>
+                </li>
+                            </ul>
+        </div>
+        <div id="dump" class="tab-pane">
+            <ul>
+                            </ul>
+        </div>
+    </div>
+</section>
+<script>
+$('#devbar [data-toggle="tooltip"]').tooltip();
+$('#devbar .tab-pane').on('mousewheel DOMMouseScroll', function(e) { 
+    var e0 = e.originalEvent;
+    var delta = e0.wheelDelta || -e0.detail;
+
+    this.scrollTop += ( delta < 0 ? 1 : -1 ) * 50;
+    e.preventDefault();  
+});
+$("#devbar a[data-toggle=tab]").click(function() {
+    if(!$('#devbar .show-hide[aria-expanded="true"]').length || $(this).parent().hasClass('active'))
+        $("#devbar .show-hide").click();
+});
+$("#devbar .show-hide").click(function() {
+    var devbar = $(this).parent();
+    $(devbar).addClass('active');
+});
+$("#devbar .truncate").click(function() {
+    $(this).toggleClass('active');
+});
+</script>

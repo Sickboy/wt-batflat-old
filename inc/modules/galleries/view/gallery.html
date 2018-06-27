@@ -1,0 +1,29 @@
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <div class="content three_quarter first"> 
+	{loop: $items}
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                {* image sizes: lg - oryginal size, md - 600px, sm - 300px, xs - 150px *}
+                <a href="{$value.src.lg}" class="gallery-item-pl">
+                    <img src="{$value.src.lg}" class="img-responsive" \>
+                </a>
+            </div>
+        </div>
+        {/loop}
+    </div>
+    <div class="sidebar one_quarter">
+	<nav class='sdb_holder'><ul>
+	{loop: $galleryList}
+            <li><a href="/zdjecia?g={$value.slug}">{$value.name}</a></li>
+        {/loop}
+	</ul></nav>
+    </div>
+</main>
+</div>
+
+<script>
+$(document).ready(function(){
+	$('.gallery-item-pl').lightbox();
+});
+</script>

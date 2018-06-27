@@ -1,0 +1,43 @@
+{template: inc/header.html}
+{if: $page.logon_only == 1}
+{if: $this->core->getUserInfo('username') != NULL}
+<div class="wrapper row2">
+  <div id="breadcrumb" class="hoc clear">
+    <ul>
+      <li><a href="#">Strona główna</a></li>
+      <li><a href="#">{$page.title}</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="wrapper row3">
+  <main class="hoc container clear">
+    <div class="content">
+	{$page.content}
+     </div>
+    <div class="clear"></div>
+  </main>
+</div>
+{else}
+{? redirect('http://77.55.211.142') ?}
+{/if}
+{else}
+<div class="wrapper row2">
+  <div id="breadcrumb" class="hoc clear">
+    <ul>
+      <li><a href="#">Strona główna</a></li>
+      <li><a href="#">{$page.title}</a></li>
+    </ul>
+  </div>
+</div>
+<div class="wrapper row3">
+  <main class="hoc container clear">
+    <div class="content">
+        {$page.content}
+     </div>
+    <div class="clear"></div>
+  </main>
+</div>
+{/if}
+
+{template: inc/footer.html}

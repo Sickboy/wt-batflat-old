@@ -1,0 +1,33 @@
+{loop: $navigation.list}
+    {if: !isset($value.children)}
+      {if: $value.logon_only == 1}
+        {if: $this->core->getUserInfo('username') != NULL}
+     <li class="{if: $value.active || $value.class}{?= trim($value.active.' '.$value.class) ?}{/if}">
+        <a href="{$value.url}" >{$value.name}</a>
+    </li>
+    	{/if}
+      {elseif: $value.logon_only == 0}
+     <li class="{if: $value.active || $value.class}{?= trim($value.active.' '.$value.class) ?}{/if}">
+        <a href="{$value.url}" >{$value.name}</a>
+    </li>
+     {/if}    
+   {else}
+    <li class="dropdown {if: $value.active || $value.class}{?= trim($value.active.' '.$value.class) ?}{/if}">
+        <a href="{$value.url}" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            {$value.name}
+            <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu">
+            {loop: $value.children}
+	    {if: $value.logon_only == 1}
+	    {if: $this->core->getUserInfo('username') != NULL}
+            <li {if: $value.active || $value.class}class="{?= trim($value.active.' '.$value.class) ?}"{/if}><a href="{$value.url}">{$value.name}</a></li>
+            {/if}
+	    {elseif: $value.logon_only == 0}
+	    <li {if: $value.active || $value.class}class="{?= trim($value.active.' '.$value.class) ?}"{/if}><a href="{$value.url}">{$value.name}</a></li>
+	    {/if}
+	    {/loop}
+        </ul>
+    </li>
+    {/if}
+{/loop}

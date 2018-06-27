@@ -1,0 +1,65 @@
+<article class="row">
+    <div class="col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+				<h3 class="panel-title">Zarządzanie</h3>
+			</div>
+            <div class="panel-body">
+                				<div class="table-responsive no-margin">
+					<table class="table table-striped no-margin">
+						<thead>
+							<tr>
+								<th>Nazwa</th>
+								<th>Tag</th>
+								<th class="text-right">Akcje</th>
+							</tr>
+						</thead>
+						<tbody>
+														<tr>
+								<td><a href="http://77.55.211.142/admin/galleries/edit/1?t=d84a810df55a">galeria pierwsza</a></td>
+								<td><code>*bracket**dollar*gallery.galeria-pierwsza*/bracket*</code></td>
+								<td class="text-right">
+									<a href="http://77.55.211.142/admin/galleries/edit/1?t=d84a810df55a" class="btn btn-xs btn-success">
+										<i class="fa fa-pencil"></i> <span class="hidden-xs">Edytuj</span>
+									</a>
+									<a href="http://77.55.211.142/admin/galleries/delete/1?t=d84a810df55a" class="btn btn-xs btn-danger" data-confirm="Czy na pewno chcesz usunąć wybrany obiekt?">
+										<i class="fa fa-trash-o"></i> <span class="hidden-xs">Usuń</span>
+									</a>
+								</td>
+							</tr>
+														<tr>
+								<td><a href="http://77.55.211.142/admin/galleries/edit/2?t=d84a810df55a">galeria druga</a></td>
+								<td><code>*bracket**dollar*gallery.galeria-druga*/bracket*</code></td>
+								<td class="text-right">
+									<a href="http://77.55.211.142/admin/galleries/edit/2?t=d84a810df55a" class="btn btn-xs btn-success">
+										<i class="fa fa-pencil"></i> <span class="hidden-xs">Edytuj</span>
+									</a>
+									<a href="http://77.55.211.142/admin/galleries/delete/2?t=d84a810df55a" class="btn btn-xs btn-danger" data-confirm="Czy na pewno chcesz usunąć wybrany obiekt?">
+										<i class="fa fa-trash-o"></i> <span class="hidden-xs">Usuń</span>
+									</a>
+								</td>
+							</tr>
+													</tbody>
+					</table>
+				</div>
+                            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+				<h3 class="panel-title">Dodaj galerię</h3>
+			</div>
+            <div class="panel-body">
+        		<form action="http://77.55.211.142/admin/galleries/add?t=d84a810df55a" method="POST">
+    	            <div class="form-group">
+    	                <label>Nazwa</label>
+    	                <input type="text" name="name" class="form-control" required />
+    	            </div>
+    	            <input type="submit" class="btn btn-primary" value="Zapisz" />
+                </form>
+            </div>
+        </div>
+    </div>
+</article>

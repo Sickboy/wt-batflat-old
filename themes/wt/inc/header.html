@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!--
+	Główna
+-->
+<html>
+<head>
+<title>Koło Łowieckie "Wieniec" w Toruniu</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="{$bat.path}/inc/css/bootstrap.min.css">
+<link href="{$bat.theme}/css/layout.css" rel="stylesheet" type="text/css" media="all">
+<!--- <link href="{$bat.theme}/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="{$bat.path}/inc/jscripts/bootstrap.min.js"></script>
+</head>
+<style>
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 15px;
+    border: 1px solid transparent;
+}
+.navbar-custom {
+  background-color: #423424;
+  border-color: #423424;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+.navbar-custom .navbar-text {
+  color: #FFFFFF;
+}
+.navbar-custom .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus {
+  color: #FF8F2B;
+  background-color: #423424;
+}
+.navbar-custom .navbar-nav > .active > a,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus {
+  color: #FF8F2B;
+  background-color: #423424;
+}
+.navbar-custom .navbar-nav > .disabled > a,
+.navbar-custom .navbar-nav > .disabled > a:hover,
+.navbar-custom .navbar-nav > .disabled > a:focus {
+  color: #FF8F2B;
+  background-color: #423424;
+}
+.navbar-custom .navbar-toggle {
+  border-color: #cccccc;
+}
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+  background-color: #FF8F2B;
+}
+.navbar-custom .navbar-toggle .icon-bar {
+  background-color: #cccccc;
+}
+.navbar-custom .navbar-collapse,
+.navbar-custom .navbar-form {
+  border-color: #423424;
+}
+.navbar-custom .navbar-nav > .dropdown > a:hover .caret,
+.navbar-custom .navbar-nav > .dropdown > a:focus .caret {
+  border-top-color: #FF8F2B;
+  border-bottom-color: #FF8F2B;
+}
+.navbar-custom .navbar-nav > .open > a,
+.navbar-custom .navbar-nav > .open > a:hover,
+.navbar-custom .navbar-nav > .open > a:focus {
+  background-color: #423424;
+  color: #FF8F2B;
+}
+.navbar-custom .navbar-nav > .open > a .caret,
+.navbar-custom .navbar-nav > .open > a:hover .caret,
+.navbar-custom .navbar-nav > .open > a:focus .caret {
+  border-top-color: #FF8F2B;
+  border-bottom-color: #FF8F2B;
+}
+.navbar-custom .navbar-nav > .dropdown > a .caret {
+  border-top-color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
+}
+@media (max-width: 767) {
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #FFFFFF;
+    background-color: #FF8F2B;
+  }
+  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #FFFFFF;
+    background-color: #FF8F2B;
+  }
+  .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #FF8F2B;
+    background-color: transparent;
+  }
+}
+.navbar-custom .navbar-link {
+  color: #FFFFFF;
+}
+.navbar-custom .navbar-link:hover {
+  color: #FFFFFF;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color:rgba(0,0,0,.6);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 2.2;
+    color: #ffffff;
+    white-space: nowrap;
+    border-top: 2px solid #615c5c;
+}
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #FF8F2B;
+    outline: 0;
+    line-height: 2.2;
+    border-top: 2px solid #615c5c;
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #ffffff;
+    white-space: nowrap;
+    background-color: #FF8F2B;
+    line-height: 2.2;
+    border-top: 2px solid #615c5c;
+}
+</style>
+<!--- <script>
+$(document).ready(function(){
+    $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideDown("900");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideUp("normal");
+            $(this).toggleClass('open');       
+        }
+    );
+});
+</script> -->
+<body id="top">
+<div class="wrapper row0">
+  <div id="topbar" class="hoc clear">
+    <div class="fl_left">
+      <ul class="nospace inline pushright">
+	{if: $this->core->getUserInfo('username') != NULL}
+	<li><i class="fa fa-user"></i>Witaj,  {?= sprintf($this->core->getUserInfo('username')) ?} <li><a href="<?php echo url('/admin/logout') ?>"><i class="fa fa-sign-out"></i> Wyloguj </a> </li>
+	{else}
+        <li><a href="/admin/"><i class="fa fa-sign-in"></i> Zaloguj </a> </li>
+   	{/if}   
+   </ul>
+    </div>
+    <div class="fl_right">
+      <form class="clear" method="post" action="#">
+        <fieldset>
+          <legend>Szukaj:</legend>
+          <input type="search" value="" placeholder="Szukaj&hellip;">
+          <button class="fa fa-search" type="submit" title="Szukaj"><em>Szukaj</em></button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">
+    <div id="logo" class="fl_left">
+      <h1><a href="index.php">WIENIEC</a></h1>
+      <p>Koło Łowieckie w Toruniu</p>
+    </div>
+
+<header class="navbar navbar-custom fl_right" >
+  
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+{$navigation.main}
+      </ul>
+    </nav>
+ 
+</header>
+
+</header>
+
+  </header>
+</div>

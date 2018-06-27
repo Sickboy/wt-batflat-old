@@ -1,0 +1,34 @@
+<?php
+/**
+* This file is part of Batflat ~ the lightweight, fast and easy CMS
+*
+* @author       Paweł Klockiewicz <klockiewicz@sruu.pl>
+* @author       Wojciech Król <krol@sruu.pl>
+* @copyright    2017 Paweł Klockiewicz, Wojciech Król <Sruu.pl>
+* @license      https://batflat.org/license
+* @link         https://batflat.org
+*/
+
+namespace Inc\Modules\Galleries;
+
+use Inc\Core\SiteModule;
+
+class Site extends SiteModule
+{
+    public function init()
+    {
+        $this->_importGalleries();
+    }
+
+    private function _importGalleries()
+    {
+	if (isset($_GET['g']){
+		$gallerySlug = $_GET['g'];
+		$galleryId = $_GET['i'];
+		$items = $this->db('galleries_items')->where('gallery', $galleryId)->toArray();
+
+$items = $this->db('galleries_items')->where('gallery', $gallery['id'])->asc('id')->toArray();
+		
+	}
+    }
+}
