@@ -4,12 +4,11 @@
             <div class="panel-heading">
                 <h3 class="panel-title">Tłumaczenie</h3>
                 <ul class="nav nav-tabs">
-                                        <li class=""><a href="http://77.55.211.142/admin/settings/translation?lang=en_english&source=0&t=32b65cba0e8a">en_english</a></li>
-                                        <li class="active"><a href="http://77.55.211.142/admin/settings/translation?lang=pl_polski&source=0&t=32b65cba0e8a">pl_polski</a></li>
+                                        <li class="active"><a href="http://77.55.211.142/admin/settings/translation?lang=pl_polski&source=0&t=f1488d76b146">pl_polski</a></li>
                                     </ul>
             </div>
             <div class="panel-body">
-                <form name="selectModule" action="http://77.55.211.142/admin/settings/translation?t=32b65cba0e8a" method="GET">
+                <form name="selectModule" action="http://77.55.211.142/admin/settings/translation?t=f1488d76b146" method="GET">
         			<select name="source" class="form-control" onchange="document.selectModule.submit();" data-use-search="true">
         				        					<option value="0" selected>General</option>
         				        					<option value="blog" >Blog</option>
@@ -31,7 +30,7 @@
         				        					<option value="users" >Users</option>
         				        			</select>
         			<input type="hidden" name="lang" value="pl_polski">
-        			<input type="hidden" name="t" value="32b65cba0e8a">
+        			<input type="hidden" name="t" value="f1488d76b146">
         		</form>
                 <div class="table-responsive">
                     <form method="post">
@@ -295,7 +294,7 @@
                 <h3 class="panel-title">Nowy język</h3>
             </div>
             <div class="panel-body">
-                <form method="post" action="http://77.55.211.142/admin/settings/translation?t=32b65cba0e8a">
+                <form method="post" action="http://77.55.211.142/admin/settings/translation?t=f1488d76b146">
                     <div class="form-group">
                         <label>Nazwa</label>
                         <input type="text" name="language_name" class="form-control" placeholder="Example: en_english" required/>
@@ -310,7 +309,7 @@
                 <h3 class="panel-title">Importuj język</h3>
             </div>
             <div class="panel-body">
-                <form method="post" action="http://77.55.211.142/admin/settings/translation?t=32b65cba0e8a" enctype="multipart/form-data">
+                <form method="post" action="http://77.55.211.142/admin/settings/translation?t=f1488d76b146" enctype="multipart/form-data">
                     <div class="well well-sm clearfix">
                         Wybierz z dysku plik ZIP zawierający pliki językowe.                        <span class="label label-default pull-right">info</span>
                     </div>
@@ -332,13 +331,13 @@
                                         <tr>
                         <td>en_english</td>
                         <td class="text-right">
-                            <a href="http://77.55.211.142/admin/settings/deleteLanguage/en_english?t=32b65cba0e8a" class="btn btn-danger btn-xs disabled" data-confirm="Czy na pewno chcesz usunąć wybrany język z serwera?" data-toggle="tooltip" data-placement="top" title="Usuń">
+                            <a href="http://77.55.211.142/admin/settings/deleteLanguage/en_english?t=f1488d76b146" class="btn btn-danger btn-xs " data-confirm="Czy na pewno chcesz usunąć wybrany język z serwera?" data-toggle="tooltip" data-placement="top" title="Usuń">
                                 <i class="fa fa-trash"></i>
                             </a>
-                                                        <a href="http://77.55.211.142/admin/settings/deactivateLanguage/en_english?t=32b65cba0e8a" class="btn btn-warning btn-xs " data-toggle="tooltip" data-placement="top" title="Dezaktywuj">
-                                <i class="fa fa-minus"></i>
+                                                        <a href="http://77.55.211.142/admin/settings/activateLanguage/en_english?t=f1488d76b146" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="Aktywuj">
+                                <i class="fa fa-plus"></i>
                             </a>
-                                                        <a href="http://77.55.211.142/admin/settings/translation?export=en_english&t=32b65cba0e8a" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="Exportuj język">
+                                                        <a href="http://77.55.211.142/admin/settings/translation?export=en_english&t=f1488d76b146" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="Exportuj język">
                                 <i class="fa fa-download"></i>
                             </a>
                         </td>
@@ -346,13 +345,13 @@
                                         <tr>
                         <td>es_spanish</td>
                         <td class="text-right">
-                            <a href="http://77.55.211.142/admin/settings/deleteLanguage/es_spanish?t=32b65cba0e8a" class="btn btn-danger btn-xs " data-confirm="Czy na pewno chcesz usunąć wybrany język z serwera?" data-toggle="tooltip" data-placement="top" title="Usuń">
+                            <a href="http://77.55.211.142/admin/settings/deleteLanguage/es_spanish?t=f1488d76b146" class="btn btn-danger btn-xs " data-confirm="Czy na pewno chcesz usunąć wybrany język z serwera?" data-toggle="tooltip" data-placement="top" title="Usuń">
                                 <i class="fa fa-trash"></i>
                             </a>
-                                                        <a href="http://77.55.211.142/admin/settings/activateLanguage/es_spanish?t=32b65cba0e8a" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="Aktywuj">
+                                                        <a href="http://77.55.211.142/admin/settings/activateLanguage/es_spanish?t=f1488d76b146" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="Aktywuj">
                                 <i class="fa fa-plus"></i>
                             </a>
-                                                        <a href="http://77.55.211.142/admin/settings/translation?export=es_spanish&t=32b65cba0e8a" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="Exportuj język">
+                                                        <a href="http://77.55.211.142/admin/settings/translation?export=es_spanish&t=f1488d76b146" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="Exportuj język">
                                 <i class="fa fa-download"></i>
                             </a>
                         </td>
@@ -360,13 +359,13 @@
                                         <tr>
                         <td>fr_french</td>
                         <td class="text-right">
-                            <a href="http://77.55.211.142/admin/settings/deleteLanguage/fr_french?t=32b65cba0e8a" class="btn btn-danger btn-xs " data-confirm="Czy na pewno chcesz usunąć wybrany język z serwera?" data-toggle="tooltip" data-placement="top" title="Usuń">
+                            <a href="http://77.55.211.142/admin/settings/deleteLanguage/fr_french?t=f1488d76b146" class="btn btn-danger btn-xs " data-confirm="Czy na pewno chcesz usunąć wybrany język z serwera?" data-toggle="tooltip" data-placement="top" title="Usuń">
                                 <i class="fa fa-trash"></i>
                             </a>
-                                                        <a href="http://77.55.211.142/admin/settings/activateLanguage/fr_french?t=32b65cba0e8a" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="Aktywuj">
+                                                        <a href="http://77.55.211.142/admin/settings/activateLanguage/fr_french?t=f1488d76b146" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="Aktywuj">
                                 <i class="fa fa-plus"></i>
                             </a>
-                                                        <a href="http://77.55.211.142/admin/settings/translation?export=fr_french&t=32b65cba0e8a" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="Exportuj język">
+                                                        <a href="http://77.55.211.142/admin/settings/translation?export=fr_french&t=f1488d76b146" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="Exportuj język">
                                 <i class="fa fa-download"></i>
                             </a>
                         </td>
@@ -374,13 +373,13 @@
                                         <tr>
                         <td>it_italian</td>
                         <td class="text-right">
-                            <a href="http://77.55.211.142/admin/settings/deleteLanguage/it_italian?t=32b65cba0e8a" class="btn btn-danger btn-xs " data-confirm="Czy na pewno chcesz usunąć wybrany język z serwera?" data-toggle="tooltip" data-placement="top" title="Usuń">
+                            <a href="http://77.55.211.142/admin/settings/deleteLanguage/it_italian?t=f1488d76b146" class="btn btn-danger btn-xs " data-confirm="Czy na pewno chcesz usunąć wybrany język z serwera?" data-toggle="tooltip" data-placement="top" title="Usuń">
                                 <i class="fa fa-trash"></i>
                             </a>
-                                                        <a href="http://77.55.211.142/admin/settings/activateLanguage/it_italian?t=32b65cba0e8a" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="Aktywuj">
+                                                        <a href="http://77.55.211.142/admin/settings/activateLanguage/it_italian?t=f1488d76b146" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="Aktywuj">
                                 <i class="fa fa-plus"></i>
                             </a>
-                                                        <a href="http://77.55.211.142/admin/settings/translation?export=it_italian&t=32b65cba0e8a" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="Exportuj język">
+                                                        <a href="http://77.55.211.142/admin/settings/translation?export=it_italian&t=f1488d76b146" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="Exportuj język">
                                 <i class="fa fa-download"></i>
                             </a>
                         </td>
@@ -388,13 +387,13 @@
                                         <tr>
                         <td>nl_dutch</td>
                         <td class="text-right">
-                            <a href="http://77.55.211.142/admin/settings/deleteLanguage/nl_dutch?t=32b65cba0e8a" class="btn btn-danger btn-xs " data-confirm="Czy na pewno chcesz usunąć wybrany język z serwera?" data-toggle="tooltip" data-placement="top" title="Usuń">
+                            <a href="http://77.55.211.142/admin/settings/deleteLanguage/nl_dutch?t=f1488d76b146" class="btn btn-danger btn-xs " data-confirm="Czy na pewno chcesz usunąć wybrany język z serwera?" data-toggle="tooltip" data-placement="top" title="Usuń">
                                 <i class="fa fa-trash"></i>
                             </a>
-                                                        <a href="http://77.55.211.142/admin/settings/activateLanguage/nl_dutch?t=32b65cba0e8a" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="Aktywuj">
+                                                        <a href="http://77.55.211.142/admin/settings/activateLanguage/nl_dutch?t=f1488d76b146" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="Aktywuj">
                                 <i class="fa fa-plus"></i>
                             </a>
-                                                        <a href="http://77.55.211.142/admin/settings/translation?export=nl_dutch&t=32b65cba0e8a" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="Exportuj język">
+                                                        <a href="http://77.55.211.142/admin/settings/translation?export=nl_dutch&t=f1488d76b146" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="Exportuj język">
                                 <i class="fa fa-download"></i>
                             </a>
                         </td>
@@ -402,13 +401,13 @@
                                         <tr>
                         <td>pl_polski</td>
                         <td class="text-right">
-                            <a href="http://77.55.211.142/admin/settings/deleteLanguage/pl_polski?t=32b65cba0e8a" class="btn btn-danger btn-xs disabled" data-confirm="Czy na pewno chcesz usunąć wybrany język z serwera?" data-toggle="tooltip" data-placement="top" title="Usuń">
+                            <a href="http://77.55.211.142/admin/settings/deleteLanguage/pl_polski?t=f1488d76b146" class="btn btn-danger btn-xs disabled" data-confirm="Czy na pewno chcesz usunąć wybrany język z serwera?" data-toggle="tooltip" data-placement="top" title="Usuń">
                                 <i class="fa fa-trash"></i>
                             </a>
-                                                        <a href="http://77.55.211.142/admin/settings/deactivateLanguage/pl_polski?t=32b65cba0e8a" class="btn btn-warning btn-xs disabled" data-toggle="tooltip" data-placement="top" title="Dezaktywuj">
+                                                        <a href="http://77.55.211.142/admin/settings/deactivateLanguage/pl_polski?t=f1488d76b146" class="btn btn-warning btn-xs disabled" data-toggle="tooltip" data-placement="top" title="Dezaktywuj">
                                 <i class="fa fa-minus"></i>
                             </a>
-                                                        <a href="http://77.55.211.142/admin/settings/translation?export=pl_polski&t=32b65cba0e8a" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="Exportuj język">
+                                                        <a href="http://77.55.211.142/admin/settings/translation?export=pl_polski&t=f1488d76b146" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="Exportuj język">
                                 <i class="fa fa-download"></i>
                             </a>
                         </td>
@@ -416,13 +415,13 @@
                                         <tr>
                         <td>ru_russian</td>
                         <td class="text-right">
-                            <a href="http://77.55.211.142/admin/settings/deleteLanguage/ru_russian?t=32b65cba0e8a" class="btn btn-danger btn-xs " data-confirm="Czy na pewno chcesz usunąć wybrany język z serwera?" data-toggle="tooltip" data-placement="top" title="Usuń">
+                            <a href="http://77.55.211.142/admin/settings/deleteLanguage/ru_russian?t=f1488d76b146" class="btn btn-danger btn-xs " data-confirm="Czy na pewno chcesz usunąć wybrany język z serwera?" data-toggle="tooltip" data-placement="top" title="Usuń">
                                 <i class="fa fa-trash"></i>
                             </a>
-                                                        <a href="http://77.55.211.142/admin/settings/activateLanguage/ru_russian?t=32b65cba0e8a" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="Aktywuj">
+                                                        <a href="http://77.55.211.142/admin/settings/activateLanguage/ru_russian?t=f1488d76b146" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="Aktywuj">
                                 <i class="fa fa-plus"></i>
                             </a>
-                                                        <a href="http://77.55.211.142/admin/settings/translation?export=ru_russian&t=32b65cba0e8a" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="Exportuj język">
+                                                        <a href="http://77.55.211.142/admin/settings/translation?export=ru_russian&t=f1488d76b146" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="Exportuj język">
                                 <i class="fa fa-download"></i>
                             </a>
                         </td>
@@ -430,13 +429,13 @@
                                         <tr>
                         <td>se_swedish</td>
                         <td class="text-right">
-                            <a href="http://77.55.211.142/admin/settings/deleteLanguage/se_swedish?t=32b65cba0e8a" class="btn btn-danger btn-xs " data-confirm="Czy na pewno chcesz usunąć wybrany język z serwera?" data-toggle="tooltip" data-placement="top" title="Usuń">
+                            <a href="http://77.55.211.142/admin/settings/deleteLanguage/se_swedish?t=f1488d76b146" class="btn btn-danger btn-xs " data-confirm="Czy na pewno chcesz usunąć wybrany język z serwera?" data-toggle="tooltip" data-placement="top" title="Usuń">
                                 <i class="fa fa-trash"></i>
                             </a>
-                                                        <a href="http://77.55.211.142/admin/settings/activateLanguage/se_swedish?t=32b65cba0e8a" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="Aktywuj">
+                                                        <a href="http://77.55.211.142/admin/settings/activateLanguage/se_swedish?t=f1488d76b146" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="Aktywuj">
                                 <i class="fa fa-plus"></i>
                             </a>
-                                                        <a href="http://77.55.211.142/admin/settings/translation?export=se_swedish&t=32b65cba0e8a" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="Exportuj język">
+                                                        <a href="http://77.55.211.142/admin/settings/translation?export=se_swedish&t=f1488d76b146" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="Exportuj język">
                                 <i class="fa fa-download"></i>
                             </a>
                         </td>
@@ -444,13 +443,13 @@
                                         <tr>
                         <td>tr_turkish</td>
                         <td class="text-right">
-                            <a href="http://77.55.211.142/admin/settings/deleteLanguage/tr_turkish?t=32b65cba0e8a" class="btn btn-danger btn-xs " data-confirm="Czy na pewno chcesz usunąć wybrany język z serwera?" data-toggle="tooltip" data-placement="top" title="Usuń">
+                            <a href="http://77.55.211.142/admin/settings/deleteLanguage/tr_turkish?t=f1488d76b146" class="btn btn-danger btn-xs " data-confirm="Czy na pewno chcesz usunąć wybrany język z serwera?" data-toggle="tooltip" data-placement="top" title="Usuń">
                                 <i class="fa fa-trash"></i>
                             </a>
-                                                        <a href="http://77.55.211.142/admin/settings/activateLanguage/tr_turkish?t=32b65cba0e8a" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="Aktywuj">
+                                                        <a href="http://77.55.211.142/admin/settings/activateLanguage/tr_turkish?t=f1488d76b146" class="btn btn-success btn-xs" data-toggle="tooltip" data-placement="top" title="Aktywuj">
                                 <i class="fa fa-plus"></i>
                             </a>
-                                                        <a href="http://77.55.211.142/admin/settings/translation?export=tr_turkish&t=32b65cba0e8a" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="Exportuj język">
+                                                        <a href="http://77.55.211.142/admin/settings/translation?export=tr_turkish&t=f1488d76b146" class="btn btn-primary btn-xs" data-toggle="tooltip" data-placement="top" title="Exportuj język">
                                 <i class="fa fa-download"></i>
                             </a>
                         </td>

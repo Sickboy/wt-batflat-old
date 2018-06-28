@@ -1,65 +1,190 @@
 <article class="row">
-    <div class="col-md-8">
+    <div class="col-md-12">
         <div class="panel panel-default">
             <div class="panel-heading">
-				<h3 class="panel-title">Zarządzanie</h3>
-			</div>
-            <div class="panel-body">
-                				<div class="table-responsive no-margin">
-					<table class="table table-striped no-margin">
-						<thead>
-							<tr>
-								<th>Nazwa</th>
-								<th>Tag</th>
-								<th class="text-right">Akcje</th>
-							</tr>
-						</thead>
-						<tbody>
-														<tr>
-								<td><a href="http://77.55.211.142/admin/galleries/edit/1?t=d84a810df55a">galeria pierwsza</a></td>
-								<td><code>*bracket**dollar*gallery.galeria-pierwsza*/bracket*</code></td>
-								<td class="text-right">
-									<a href="http://77.55.211.142/admin/galleries/edit/1?t=d84a810df55a" class="btn btn-xs btn-success">
-										<i class="fa fa-pencil"></i> <span class="hidden-xs">Edytuj</span>
-									</a>
-									<a href="http://77.55.211.142/admin/galleries/delete/1?t=d84a810df55a" class="btn btn-xs btn-danger" data-confirm="Czy na pewno chcesz usunąć wybrany obiekt?">
-										<i class="fa fa-trash-o"></i> <span class="hidden-xs">Usuń</span>
-									</a>
-								</td>
-							</tr>
-														<tr>
-								<td><a href="http://77.55.211.142/admin/galleries/edit/2?t=d84a810df55a">galeria druga</a></td>
-								<td><code>*bracket**dollar*gallery.galeria-druga*/bracket*</code></td>
-								<td class="text-right">
-									<a href="http://77.55.211.142/admin/galleries/edit/2?t=d84a810df55a" class="btn btn-xs btn-success">
-										<i class="fa fa-pencil"></i> <span class="hidden-xs">Edytuj</span>
-									</a>
-									<a href="http://77.55.211.142/admin/galleries/delete/2?t=d84a810df55a" class="btn btn-xs btn-danger" data-confirm="Czy na pewno chcesz usunąć wybrany obiekt?">
-										<i class="fa fa-trash-o"></i> <span class="hidden-xs">Usuń</span>
-									</a>
-								</td>
-							</tr>
-													</tbody>
-					</table>
-				</div>
-                            </div>
-        </div>
-    </div>
-
-    <div class="col-md-4">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-				<h3 class="panel-title">Dodaj galerię</h3>
-			</div>
-            <div class="panel-body">
-        		<form action="http://77.55.211.142/admin/galleries/add?t=d84a810df55a" method="POST">
-    	            <div class="form-group">
-    	                <label>Nazwa</label>
-    	                <input type="text" name="name" class="form-control" required />
-    	            </div>
-    	            <input type="submit" class="btn btn-primary" value="Zapisz" />
-                </form>
+                <h3 class="panel-title">Zarządzanie</h3>
+                <ul class="nav nav-tabs">
+                                        <li class="active"><a href="http://77.55.211.142/admin/navigation/manage?lang=pl_polski&t=c29168d90858">pl_polski</a></li>
+                                    </ul>
             </div>
+            <div class="panel-body">
+        		                                        <div class="table-responsive">
+                        <table class="table table-striped no-margin">
+                            <thead>
+                                <tr>
+                                    <th>*bracket**dollar*navigation.main*/bracket*</th>
+                                    <th></th>
+				    <th>Dla zalogowanych</th>
+                                    <th class="text-right">
+                                        <a href="http://77.55.211.142/admin/navigation/editNav/1?t=c29168d90858" class="btn btn-xs btn-success disabled">
+                                            <i class="fa fa-pencil"></i> <span class="hidden-xs">Edytuj</span>
+                                        </a>
+                                        <a href="http://77.55.211.142/admin/navigation/deleteNav/1?t=c29168d90858" class="btn btn-xs btn-danger disabled" data-confirm="Czy na pewno chcesz usunąć wybrany odnośnik?">
+                                            <i class="fa fa-trash-o"></i> <span class="hidden-xs">Usuń</span>
+                                        </a>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                                                                                        <tr>
+                                        <td><a href="http://77.55.211.142/admin/navigation/editLink/2?t=c29168d90858">Strona główna</a></td>
+                                        <td>/strona-gowna</td>
+					<td><i class="fa fa-square-o"></i>                                                                        
+                                        <td class="text-right">
+                                            <a href="http://77.55.211.142/admin/navigation/changeOrder/up/2?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-up"></i></a>
+                                            <a href="http://77.55.211.142/admin/navigation/changeOrder/down/2?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-down"></i></a>
+                                            <a href="http://77.55.211.142/admin/navigation/editLink/2?t=c29168d90858" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i> <span class="hidden-xs">Edytuj</span></a>
+                                            <a href="http://77.55.211.142/admin/navigation/deleteLink/2?t=c29168d90858" class="btn btn-xs btn-danger" data-confirm="Czy na pewno chcesz usunąć wybrany odnośnik?"><i class="fa fa-trash-o"></i> <span class="hidden-xs">Usuń</span></a>
+                                        </td>
+                                    </tr>
+                                                                                                                <tr>
+                                        <td><a href="http://77.55.211.142/admin/navigation/editLink/8?t=c29168d90858">O kole</a></td>
+                                        <td>#</td>
+					<td><i class="fa fa-square-o"></i>                                                                        
+                                        <td class="text-right">
+                                            <a href="http://77.55.211.142/admin/navigation/changeOrder/up/8?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-up"></i></a>
+                                            <a href="http://77.55.211.142/admin/navigation/changeOrder/down/8?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-down"></i></a>
+                                            <a href="http://77.55.211.142/admin/navigation/editLink/8?t=c29168d90858" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i> <span class="hidden-xs">Edytuj</span></a>
+                                            <a href="http://77.55.211.142/admin/navigation/deleteLink/8?t=c29168d90858" class="btn btn-xs btn-danger" data-confirm="Czy na pewno chcesz usunąć wybrany odnośnik?"><i class="fa fa-trash-o"></i> <span class="hidden-xs">Usuń</span></a>
+                                        </td>
+                                    </tr>
+                                                                                                                                <tr>
+                                                <td><i class="fa fa-long-arrow-right"></i> <a href="http://77.55.211.142/admin/navigation/editLink/7?t=c29168d90858">Aktualności</a></td>
+                                                <td>/blog</td>
+						<td><i class="fa fa-square-o"></i>                                                <td class="text-right">
+                                                    <a href="http://77.55.211.142/admin/navigation/changeOrder/up/7?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-up"></i></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/changeOrder/down/7?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-down"></i></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/editLink/7?t=c29168d90858" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i> <span class="hidden-xs">Edytuj</span></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/deleteLink/7?t=c29168d90858" class="btn btn-xs btn-danger" data-confirm="Czy na pewno chcesz usunąć wybrany odnośnik?"><i class="fa fa-trash-o"></i> <span class="hidden-xs">Usuń</span></a>
+                                                </td>
+                                            </tr>
+                                                                                        <tr>
+                                                <td><i class="fa fa-long-arrow-right"></i> <a href="http://77.55.211.142/admin/navigation/editLink/11?t=c29168d90858">Historia</a></td>
+                                                <td>/historia</td>
+						<td><i class="fa fa-square-o"></i>                                                <td class="text-right">
+                                                    <a href="http://77.55.211.142/admin/navigation/changeOrder/up/11?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-up"></i></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/changeOrder/down/11?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-down"></i></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/editLink/11?t=c29168d90858" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i> <span class="hidden-xs">Edytuj</span></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/deleteLink/11?t=c29168d90858" class="btn btn-xs btn-danger" data-confirm="Czy na pewno chcesz usunąć wybrany odnośnik?"><i class="fa fa-trash-o"></i> <span class="hidden-xs">Usuń</span></a>
+                                                </td>
+                                            </tr>
+                                                                                        <tr>
+                                                <td><i class="fa fa-long-arrow-right"></i> <a href="http://77.55.211.142/admin/navigation/editLink/13?t=c29168d90858">Nasze obwody</a></td>
+                                                <td>/obwody</td>
+						<td><i class="fa fa-square-o"></i>                                                <td class="text-right">
+                                                    <a href="http://77.55.211.142/admin/navigation/changeOrder/up/13?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-up"></i></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/changeOrder/down/13?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-down"></i></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/editLink/13?t=c29168d90858" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i> <span class="hidden-xs">Edytuj</span></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/deleteLink/13?t=c29168d90858" class="btn btn-xs btn-danger" data-confirm="Czy na pewno chcesz usunąć wybrany odnośnik?"><i class="fa fa-trash-o"></i> <span class="hidden-xs">Usuń</span></a>
+                                                </td>
+                                            </tr>
+                                                                                        <tr>
+                                                <td><i class="fa fa-long-arrow-right"></i> <a href="http://77.55.211.142/admin/navigation/editLink/12?t=c29168d90858">Członkowie</a></td>
+                                                <td>/czlonkowie</td>
+						<td><i class="fa fa-square-o"></i>                                                <td class="text-right">
+                                                    <a href="http://77.55.211.142/admin/navigation/changeOrder/up/12?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-up"></i></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/changeOrder/down/12?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-down"></i></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/editLink/12?t=c29168d90858" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i> <span class="hidden-xs">Edytuj</span></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/deleteLink/12?t=c29168d90858" class="btn btn-xs btn-danger" data-confirm="Czy na pewno chcesz usunąć wybrany odnośnik?"><i class="fa fa-trash-o"></i> <span class="hidden-xs">Usuń</span></a>
+                                                </td>
+                                            </tr>
+                                                                                                                                                            <tr>
+                                        <td><a href="http://77.55.211.142/admin/navigation/editLink/14?t=c29168d90858">Galerie</a></td>
+                                        <td>#</td>
+					<td><i class="fa fa-square-o"></i>                                                                        
+                                        <td class="text-right">
+                                            <a href="http://77.55.211.142/admin/navigation/changeOrder/up/14?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-up"></i></a>
+                                            <a href="http://77.55.211.142/admin/navigation/changeOrder/down/14?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-down"></i></a>
+                                            <a href="http://77.55.211.142/admin/navigation/editLink/14?t=c29168d90858" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i> <span class="hidden-xs">Edytuj</span></a>
+                                            <a href="http://77.55.211.142/admin/navigation/deleteLink/14?t=c29168d90858" class="btn btn-xs btn-danger" data-confirm="Czy na pewno chcesz usunąć wybrany odnośnik?"><i class="fa fa-trash-o"></i> <span class="hidden-xs">Usuń</span></a>
+                                        </td>
+                                    </tr>
+                                                                                                                                <tr>
+                                                <td><i class="fa fa-long-arrow-right"></i> <a href="http://77.55.211.142/admin/navigation/editLink/21?t=c29168d90858">Zdjęcia</a></td>
+                                                <td>/zdjecia</td>
+						<td><i class="fa fa-square-o"></i>                                                <td class="text-right">
+                                                    <a href="http://77.55.211.142/admin/navigation/changeOrder/up/21?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-up"></i></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/changeOrder/down/21?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-down"></i></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/editLink/21?t=c29168d90858" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i> <span class="hidden-xs">Edytuj</span></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/deleteLink/21?t=c29168d90858" class="btn btn-xs btn-danger" data-confirm="Czy na pewno chcesz usunąć wybrany odnośnik?"><i class="fa fa-trash-o"></i> <span class="hidden-xs">Usuń</span></a>
+                                                </td>
+                                            </tr>
+                                                                                                                                                            <tr>
+                                        <td><a href="http://77.55.211.142/admin/navigation/editLink/15?t=c29168d90858">O polowaniu</a></td>
+                                        <td>#</td>
+					<td><i class="fa fa-square-o"></i>                                                                        
+                                        <td class="text-right">
+                                            <a href="http://77.55.211.142/admin/navigation/changeOrder/up/15?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-up"></i></a>
+                                            <a href="http://77.55.211.142/admin/navigation/changeOrder/down/15?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-down"></i></a>
+                                            <a href="http://77.55.211.142/admin/navigation/editLink/15?t=c29168d90858" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i> <span class="hidden-xs">Edytuj</span></a>
+                                            <a href="http://77.55.211.142/admin/navigation/deleteLink/15?t=c29168d90858" class="btn btn-xs btn-danger" data-confirm="Czy na pewno chcesz usunąć wybrany odnośnik?"><i class="fa fa-trash-o"></i> <span class="hidden-xs">Usuń</span></a>
+                                        </td>
+                                    </tr>
+                                                                                                                                <tr>
+                                                <td><i class="fa fa-long-arrow-right"></i> <a href="http://77.55.211.142/admin/navigation/editLink/16?t=c29168d90858">Jak bezpiecznie polować</a></td>
+                                                <td>/jak-bezpiecznie-polowac</td>
+						<td><i class="fa fa-square-o"></i>                                                <td class="text-right">
+                                                    <a href="http://77.55.211.142/admin/navigation/changeOrder/up/16?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-up"></i></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/changeOrder/down/16?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-down"></i></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/editLink/16?t=c29168d90858" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i> <span class="hidden-xs">Edytuj</span></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/deleteLink/16?t=c29168d90858" class="btn btn-xs btn-danger" data-confirm="Czy na pewno chcesz usunąć wybrany odnośnik?"><i class="fa fa-trash-o"></i> <span class="hidden-xs">Usuń</span></a>
+                                                </td>
+                                            </tr>
+                                                                                        <tr>
+                                                <td><i class="fa fa-long-arrow-right"></i> <a href="http://77.55.211.142/admin/navigation/editLink/17?t=c29168d90858">Metody polowań</a></td>
+                                                <td>/metody-polowan</td>
+						<td><i class="fa fa-square-o"></i>                                                <td class="text-right">
+                                                    <a href="http://77.55.211.142/admin/navigation/changeOrder/up/17?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-up"></i></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/changeOrder/down/17?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-down"></i></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/editLink/17?t=c29168d90858" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i> <span class="hidden-xs">Edytuj</span></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/deleteLink/17?t=c29168d90858" class="btn btn-xs btn-danger" data-confirm="Czy na pewno chcesz usunąć wybrany odnośnik?"><i class="fa fa-trash-o"></i> <span class="hidden-xs">Usuń</span></a>
+                                                </td>
+                                            </tr>
+                                                                                        <tr>
+                                                <td><i class="fa fa-long-arrow-right"></i> <a href="http://77.55.211.142/admin/navigation/editLink/18?t=c29168d90858">Reakcja zwierzyny</a></td>
+                                                <td>/reakcja-zwierzyny-na-strzal</td>
+						<td><i class="fa fa-square-o"></i>                                                <td class="text-right">
+                                                    <a href="http://77.55.211.142/admin/navigation/changeOrder/up/18?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-up"></i></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/changeOrder/down/18?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-down"></i></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/editLink/18?t=c29168d90858" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i> <span class="hidden-xs">Edytuj</span></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/deleteLink/18?t=c29168d90858" class="btn btn-xs btn-danger" data-confirm="Czy na pewno chcesz usunąć wybrany odnośnik?"><i class="fa fa-trash-o"></i> <span class="hidden-xs">Usuń</span></a>
+                                                </td>
+                                            </tr>
+                                                                                        <tr>
+                                                <td><i class="fa fa-long-arrow-right"></i> <a href="http://77.55.211.142/admin/navigation/editLink/19?t=c29168d90858">Urządzenia łowieckie</a></td>
+                                                <td>/urzadzenia-lowieckie</td>
+						<td><i class="fa fa-square-o"></i>                                                <td class="text-right">
+                                                    <a href="http://77.55.211.142/admin/navigation/changeOrder/up/19?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-up"></i></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/changeOrder/down/19?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-down"></i></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/editLink/19?t=c29168d90858" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i> <span class="hidden-xs">Edytuj</span></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/deleteLink/19?t=c29168d90858" class="btn btn-xs btn-danger" data-confirm="Czy na pewno chcesz usunąć wybrany odnośnik?"><i class="fa fa-trash-o"></i> <span class="hidden-xs">Usuń</span></a>
+                                                </td>
+                                            </tr>
+                                                                                        <tr>
+                                                <td><i class="fa fa-long-arrow-right"></i> <a href="http://77.55.211.142/admin/navigation/editLink/20?t=c29168d90858">Literatura</a></td>
+                                                <td>/literatura</td>
+						<td><i class="fa fa-square-o"></i>                                                <td class="text-right">
+                                                    <a href="http://77.55.211.142/admin/navigation/changeOrder/up/20?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-up"></i></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/changeOrder/down/20?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-down"></i></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/editLink/20?t=c29168d90858" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i> <span class="hidden-xs">Edytuj</span></a>
+                                                    <a href="http://77.55.211.142/admin/navigation/deleteLink/20?t=c29168d90858" class="btn btn-xs btn-danger" data-confirm="Czy na pewno chcesz usunąć wybrany odnośnik?"><i class="fa fa-trash-o"></i> <span class="hidden-xs">Usuń</span></a>
+                                                </td>
+                                            </tr>
+                                                                                                                                                            <tr>
+                                        <td><a href="http://77.55.211.142/admin/navigation/editLink/6?t=c29168d90858">Kontakt</a></td>
+                                        <td>/kontakt</td>
+					<td><i class="fa fa-square-o"></i>                                                                        
+                                        <td class="text-right">
+                                            <a href="http://77.55.211.142/admin/navigation/changeOrder/up/6?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-up"></i></a>
+                                            <a href="http://77.55.211.142/admin/navigation/changeOrder/down/6?t=c29168d90858" class="btn btn-xs btn-primary"><i class="fa fa-arrow-down"></i></a>
+                                            <a href="http://77.55.211.142/admin/navigation/editLink/6?t=c29168d90858" class="btn btn-xs btn-success"><i class="fa fa-pencil"></i> <span class="hidden-xs">Edytuj</span></a>
+                                            <a href="http://77.55.211.142/admin/navigation/deleteLink/6?t=c29168d90858" class="btn btn-xs btn-danger" data-confirm="Czy na pewno chcesz usunąć wybrany odnośnik?"><i class="fa fa-trash-o"></i> <span class="hidden-xs">Usuń</span></a>
+                                        </td>
+                                    </tr>
+                                                                                                                                        </tbody>
+                        </table>
+                    </div>
+                            		            </div>
         </div>
     </div>
 </article>

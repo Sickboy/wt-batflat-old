@@ -1,14 +1,14 @@
 <article class="row">
-	<form name="page" action="http://77.55.211.142/admin/pages/save/18?t=32b65cba0e8a" method="POST">
+	<form name="page" action="http://77.55.211.142/admin/pages/save?t=c29168d90858" method="POST">
 		<div class="col-md-8">
 		    <div class="panel panel-default">
                 <div class="panel-heading">
-		            <h3 class="panel-title">Edycja strony</h3>
+		            <h3 class="panel-title">Nowa strona</h3>
                 </div>
                 <div class="panel-body">
                     <div class="form-group">
                         <label>Tytuł</label>
-                        <input type="text" name="title" class="form-control" value="Zdjęcia" required />
+                        <input type="text" name="title" class="form-control" value="" required />
                     </div>
                     <div class="form-group no-margin">
                         <label>Zawartość</label>
@@ -18,7 +18,7 @@
 								</div>
 							</div>
 						</div>
-                        <textarea name="content" rows="16" class="editor form-control" data-editor="wysiwyg">&lt;p&gt;&lt;span style=&quot;color: rgb(101, 101, 101); font-family: Menlo, Monaco, Consolas, &amp;quot;Courier New&amp;quot;, monospace; font-size: 13.5px; background-color: rgb(246, 248, 250);&quot;&gt;*bracket**dollar*bar*/bracket*&lt;/span&gt;&lt;br&gt;&lt;/p&gt;</textarea>
+                        <textarea name="content" rows="16" class="editor form-control" data-editor="wysiwyg"></textarea>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                 <div class="panel-body">
 		            <div class="form-group">
 		                <label>Nazwa odnośnika</label>
-		                <input type="text" name="slug" class="form-control" placeholder="Może pozostać puste" value="zdjecia"/>
+		                <input type="text" name="slug" class="form-control" placeholder="Może pozostać puste" value=""/>
 		            </div>
 		            <div class="form-group no-margin">
 		                <label>Opis</label>
@@ -49,17 +49,16 @@
 		            <div class="form-group">
 		                <label>Język</label>
 		                <select name="lang" class="form-control">
-		                			                    <option >en_english</option>
-		                    		                    <option selected>pl_polski</option>
+		                			                    <option selected>pl_polski</option>
 		                    		                </select>
 		            </div>
 		            <div class="form-group">
 		                <label>Szablon</label>
 		                <select name="template" class="form-control">
 		                			                    <option >blog.html</option>
-		                    		                    <option >index.html</option>
+		                    		                    <option selected>index.html</option>
 		                    		                    <option >post.html</option>
-		                    		                    <option selected>strona.html</option>
+		                    		                    <option >strona.html</option>
 		                    		                </select>
 		            </div>
 
@@ -70,7 +69,7 @@
                         <label><input type="checkbox" name="logon_only" value="1"  /> Tylko dla zalogowanych</label>
                     </div>
 		            <input type="submit" name="save" value="Zapisz" class="btn btn-primary" />
-					<a href="http://77.55.211.142/admin/pages/manage?t=32b65cba0e8a" class="btn btn-default">Anuluj</a>
+					<a href="http://77.55.211.142/admin/pages/manage?t=c29168d90858" class="btn btn-default">Anuluj</a>
 		        </div>
             </div>
         </div>

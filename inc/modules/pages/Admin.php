@@ -78,7 +78,7 @@ class Admin extends AdminModule
         if (!empty($e = getRedirectData())) {
             $this->assign['form'] = ['title' => isset_or($e['title'], ''), 'desc' => isset_or($e['desc'], ''), 'content' => isset_or($e['content'], ''), 'slug' => isset_or($e['slug'], '')];
         } else {
-            $this->assign['form'] = ['title' => '', 'desc' => '', 'content' => '', 'slug' => '', 'markdown' => 0];
+            $this->assign['form'] = ['title' => '', 'desc' => '', 'content' => '', 'slug' => '', 'markdown' => 0, 'logon_only' => 0];
         }
         
         $this->assign['title'] = $this->lang('new_page');

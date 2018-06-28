@@ -69,7 +69,7 @@ class Site extends SiteModule
 
 	}
 
-	$this->tpl->set('bar', $assign);
+	$this->tpl->set('galleries', $assign);
 
         $this->core->addCSS(url('inc/jscripts/lightbox/lightbox.min.css'));
         $this->core->addJS(url('inc/jscripts/lightbox/lightbox.min.js'));

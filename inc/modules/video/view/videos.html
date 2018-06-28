@@ -1,0 +1,16 @@
+{? $first=1 ?}
+{loop: $videos}
+{if: $first==1 OR $first==5}
+<div class="one_quarter first">
+{? $first=$first+1 ?}
+{else}
+<div class="one_quarter">
+{? $first=$first+1 ?}
+{/if}
+	<?php 
+		$data = file_get_contents("https://www.googleapis.com/youtube/v3/videos?key=AIzaSyDjNoq_Jo1Ny6tGTdzLYOzbLA6unDBwPEI&part=snippet&id=".$value['videoid']."");
+		$json = json_decode($data); 
+	?>
+	<a href="#" onclick="window.open('https://www.youtube-nocookie.com/embed/{$value['videoid']}','','height=360,width=480')" ><img src="<?php echo $json->items[0]->snippet->thumbnails->medium->url; ?>" /><br><center><?php echo $json->items[0]->snippet->title; ?></center></a>
+</div>
+{/loop}

@@ -1,0 +1,63 @@
+<article class="row">
+    <div class="col-md-8">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+				<h3 class="panel-title">{$lang.general.manage}</h3>
+			</div>
+            <div class="panel-body">
+                {if: !empty($videos)}
+				<div class="table-responsive no-margin">
+					<table class="table table-striped no-margin">
+						<thead>
+							<tr>
+								<th>Tytuł</th>
+								<th>VideoID</th>
+								<th class="text-right">{$lang.general.actions}</th>
+							</tr>
+						</thead>
+						<tbody>
+							{loop: $videos}
+							<tr>
+								<td>{$value.title}</td>
+								<td>{$value.videoid}</td>
+								<td class="text-right">
+								<!---	<a href="{$value.editURL}" class="btn btn-xs btn-success">
+										<i class="fa fa-pencil"></i> <span class="hidden-xs">{$lang.general.edit}</span>
+									</a> -->
+									<a href="{$value.delURL}" class="btn btn-xs btn-danger" data-confirm="{$lang.galleries.delete_confirm}">
+										<i class="fa fa-trash-o"></i> <span class="hidden-xs">{$lang.general.delete}</span>
+									</a>
+								</td>
+							</tr>
+							{/loop}
+						</tbody>
+					</table>
+				</div>
+                {else}
+                <p class="no-margin">{$lang.general.empty_array}</p>
+                {/if}
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+				<h3 class="panel-title">Dodaj film</h3>
+			</div>
+            <div class="panel-body">
+        		<form action="{?=url(ADMIN.'/video/add')?}" method="POST">
+    	            <div class="form-group">
+    	                <label>Tytuł filmu</label>
+    	                <input type="text" name="title" class="form-control" required />
+    	            </div>
+		    <div class="form-group">
+                        <label>VideoID</label>
+                        <input type="text" name="videoid" class="form-control" required />
+                    </div>
+    	            <input type="submit" class="btn btn-primary" value="{$lang.general.save}" />
+                </form>
+            </div>
+        </div>
+    </div>
+</article>

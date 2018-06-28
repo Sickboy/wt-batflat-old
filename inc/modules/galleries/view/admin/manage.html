@@ -11,7 +11,8 @@
 						<thead>
 							<tr>
 								<th>{$lang.general.name}</th>
-								<th>Tag</th>
+								<th>Slug</th>
+						<!---		<th>Dla zalogowanych</th> -->
 								<th class="text-right">{$lang.general.actions}</th>
 							</tr>
 						</thead>
@@ -19,8 +20,9 @@
 							{loop: $galleries}
 							<tr>
 								<td><a href="{$value.editURL}">{$value.name}</a></td>
-								<td><code>{$value.tag}</code></td>
-								<td class="text-right">
+								<td><code>{$value.slug}</code></td>
+								<!--- <td>{if: $value.logon_only == 1}<i class="fa fa-check-square-o"></i>{else}<i class="fa fa-square-o"></i>{/if}</td>
+	-->							<td class="text-right">
 									<a href="{$value.editURL}" class="btn btn-xs btn-success">
 										<i class="fa fa-pencil"></i> <span class="hidden-xs">{$lang.general.edit}</span>
 									</a>

@@ -50,7 +50,7 @@
                 		</select>
     	            </div>
 <div class="form-group">
-                        <label><input type="checkbox" name="logon_only" value="1" {if: $navigation.logon_only == 1}checked{/if} /> Tylko dla zalogowanych</label>
+                        <label><input type="checkbox" name="logon_only" value="1" {if: $value.logon_only == 1}checked{/if} /> Tylko dla zalogowanych</label>
                     </div>
 
     	            <input type="submit" name="save" class="btn btn-primary" value="{$lang.general.save}" />

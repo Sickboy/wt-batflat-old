@@ -103,7 +103,7 @@ function sendFile(file, editor)
 
                 return xhr;
             },
-            url: 'http://77.55.211.142/admin/pages/editorUpload?t=32b65cba0e8a',
+            url: 'http://77.55.211.142/admin/pages/editorUpload?t=c29168d90858',
             data: formData,
             type: 'POST',
             cache: false,
