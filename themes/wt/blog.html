@@ -10,6 +10,7 @@
 </style>
 <div class="wrapper row3">
   <main class="hoc container clear">
+<div class="three_quarter first">
 {loop: $blog.posts}
 {if: $value.logon_only == 1}
 {if: $this->core->getUserInfo('username') != NULL}
@@ -53,6 +54,35 @@
 </div>
 {/if}
 {/loop}
+</div>
+<div class="sidebar one_quarter">
+<nav class='sdb_holder'><ul>
+{?  $lm = '' ?}
+{? $miesiac = array( '01' => 'Styczeń', '02' => 'Luty', '03' => 'Marzec', '04' => 'Kwiecień', '05' => 'Maj', '06' => 'Czerwiec', '07' => 'Lipiec', '08' => 'Sierpień', '09' => 'Wrzesień', '10' => 'Październik', '11' => 'Listopad', '12' => 'Grudzień' ) ?}
+{loop: $blog.aaa}
+{if: $lm == date('m', $value.published_at)}
+	{if: $value.logon_only == 1}
+        {if: $this->core->getUserInfo('username') != NULL}
+	<li>
+	<a href='/blog/post/{$value.slug}'>{$value.title}</a>
+	</li>
+	{? $lm = date('m', $value.published_at) ?}
+    	{/if}
+        {elseif: $value.logon_only == 0}
+	<li>
+	<a href='/blog/post/{$value.slug}'>{$value.title}</a>
+	</li>
+	{? $lm = date('m', $value.published_at) ?}
+	{/if}
+{else}
+<li><i class="fa fa-caret-right"></i> {?= sprintf($miesiac[date('m', $value.published_at)]) ?}  {?= sprintf(date('Y', $value.published_at)) ?}</li>
+<li><a href='/blog/post/{$value.slug}'>{$value.title}</a>
+</li>
+{? $lm = date('m', $value.published_at) ?}
+{/if}
+{/loop}
+</ul></nav>
+</div>
 </main>
 </div>
 

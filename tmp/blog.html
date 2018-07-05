@@ -8,12 +8,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link rel="stylesheet" href="http://77.55.211.142/inc/css/bootstrap.min.css">
-<link href="http://77.55.211.142/themes/wt/css/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="http://77.55.211.142/themes/wt/css/layout.css" rel="stylesheet" type="text/css" media="all"> 
 <!--- <link href="http://77.55.211.142/themes/wt/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="http://77.55.211.142/inc/jscripts/bootstrap.min.js"></script>
+    <link href="http://77.55.211.142/inc/jscripts/calendar/fullcalendar.css" rel="stylesheet">
+    <script src="http://77.55.211.142/inc/jscripts/calendar/lib/moment.min.js"></script>
+    <script src="http://77.55.211.142/inc/jscripts/calendar/fullcalendar.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <style>
+a{color:#FF8F2B;}
+a:active, a:focus{background:transparent;}
 .navbar {
     position: relative;
     min-height: 50px;
@@ -50,14 +56,14 @@
   background-color: #423424;
 }
 .navbar-custom .navbar-toggle {
-  border-color: #cccccc;
+  border-color: #FF8F2B;
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
   background-color: #FF8F2B;
 }
 .navbar-custom .navbar-toggle .icon-bar {
-  background-color: #cccccc;
+  background-color: #FF8F2B;
 }
 .navbar-custom .navbar-collapse,
 .navbar-custom .navbar-form {
@@ -128,7 +134,7 @@
     background-color:rgba(0,0,0,.6);
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    border: 1px solid #ccc;
+    border: 1px solid #423424;
     border: 1px solid rgba(0,0,0,.15);
     border-radius: 4px;
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
@@ -184,8 +190,8 @@ $(document).ready(function(){
   <div id="topbar" class="hoc clear">
     <div class="fl_left">
       <ul class="nospace inline pushright">
-	        <li><a href="/admin/"><i class="fa fa-sign-in"></i> Zaloguj </a> </li>
-   	   
+		<li><i class="fa fa-user"></i>Witaj,  admin <li><a href="http://77.55.211.142/admin/logout?t=8600f89a77a0"><i class="fa fa-sign-out"></i> Wyloguj </a> </li>
+	   
    </ul>
     </div>
     <div class="fl_right">
@@ -255,6 +261,10 @@ $(document).ready(function(){
 	    	            </ul>
     </li>
                    <li class="">
+        <a href="http://77.55.211.142/kalendarz" >Kalendarz</a>
+    </li>
+         
+                  <li class="">
         <a href="http://77.55.211.142/kontakt" >Kontakt</a>
     </li>
          
@@ -278,6 +288,25 @@ $(document).ready(function(){
 </style>
 <div class="wrapper row3">
   <main class="hoc container clear">
+<div class="three_quarter first">
+<div class="content">
+<strong>Strona główna</strong><br>
+<div style="text-align:justify; padding:3px; margin-top:3px; border-top:1px solid #D3D3D3;">
+  <p>
+    <!--        <a href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=http://www.wieniectorun.pl/pages/1010.php&p[images][1]=http://www.wieniectorun.pl/images/news/i$
+    <a href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=http://www.wieniectorun.pl/pages/1010.php#'.$dane[$b]['id'].'" target="_blank"><div style="width: 250px; he$
+  </p>
+
+  <!---  <img src="http://77.55.211.142/uploads/blog?1530794880" align="right" class="myImage img-rounded" > -->
+  
+  <pre style="margin-top: 1em; margin-right: 1em; margin-bottom: 1em; padding: 8px; background-color: rgb(250, 250, 250); border-color: rgb(226, 226, 226); width: auto; overflow-y: hidden; color: rgb(72, 72, 72); font-size: 12px;"><code>e install --without development test rmagick</code></pre><p style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px;">If you have trouble installing&nbsp;<code>rmagick</code>&nbsp;on Windows, refer to&nbsp;<a href="https://www.redmine.org/projects/redmine/wiki/HowTo_install_rmagick_gem_on_Windows" class="wiki-page" style="color: rgb(17, 102, 153); text-decoration-line: none;">this HowTo</a>.</p><h5 style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif;">Database adapters</h5><p style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px;">Redmine automatically installs the adapter gems required by your database configuration by reading it from the&nbsp;<code>config/database.yml</code>&nbsp;file (eg. if you configured only a connection using the&nbsp;<code>mysql2</code>&nbsp;adapter, then only the&nbsp;<code>mysql2</code>&nbsp;gem will be installed).</p><p style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px;">Don't forget to re-run&nbsp;<code>bundle install --without development test ...</code>&nbsp;after adding or removing adapters in the&nbsp;<code>config/database.yml</code>&nbsp;file!</p><h4 style="font-family: &quot;Trebuchet MS&quot;, Georgia, &quot;Times New Roman&quot;, serif; padding: 2px 10px 1px 0px; margin: 0px 0px 10px -20px; color: rgb(96, 96, 96); font-size: 13px; border-bottom: 1px dotted rgb(192, 192, 192);">Additional dependencies (<code>Gemfile.local</code>)</h4><p style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px;">If you need to load gems that are not required by Redmine core (eg. Puma, fcgi), create a file named&nbsp;<code>Gemfile.local</code>&nbsp;at the root of your redmine directory. It will be loaded automatically when running&nbsp;<code>bundle install</code>.</p><p style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px;">Example:<br></p><pre style="margin-top: 1em; margin-right: 1em; margin-bottom: 1em; padding: 8px; background-color: rgb(250, 250, 250); border-color: rgb(226, 226, 226); width: auto; overflow-y: hidden; color: rgb(72, 72, 72); font-size: 12px;"># Gemfile.local
+gem 'puma'
+</pre><p style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px;"></p><p><a name="Database-adapters" style="color: rgb(17, 102, 153); font-family: Verdana, sans-serif; font-size: 12px;"></a><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px;"></span><a name="Additional-dependencies-Gemfilelocal" style="color: rgb(17, 102, 153); font-family: Verdana, sans-serif; font-size: 12px;"></a><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px;"></span><a name="Step-5-Session-store-secret-generation" style="color: rgb(17, 102, 153); font-family: Verdana, sans-serif; font-size: 12px;"></a><span style="color: rgb(72, 72, 72); font-family: Verdana, sans-serif; font-size: 12px;"></span></p><h3 style="font-family: &quot;Trebuchet MS&quot;, Georgia, &quot;Times New Roman&quot;, serif; padding: 2px 10px 1px 0px; margin: 0px 0px 10px -20px; color: rgb(96, 96, 96); font-size: 13px; border-bottom: 0px;">Step 5 - Session store secret generation<a href="https://www.redmine.org/projects/redmine/wiki/RedmineInstall#Step-5-Session-store-secret-generation" class="wiki-anchor" style="color: rgb(221, 221, 221); text-decoration-line: none; display: inline; margin-left: 6px;">¶</a></h3><div>
+  <em><small>
+    Napisane przez Selina Kyle w dniu 05 Lipca 2018, 14:48  </small></em><br><br>
+</div>
+</div>
+</div>
 <div class="content">
 <strong>Lorem ipsum dolor sit amet...</strong><br>
 <div style="text-align:justify; padding:3px; margin-top:3px; border-top:1px solid #D3D3D3;">
@@ -294,21 +323,25 @@ $(document).ready(function(){
 </div>
 </div>
 </div>
-<div class="content">
-<strong>Początek traktatu czasu panowania Fryderyka Wielkiego</strong><br>
-<div style="text-align:justify; padding:3px; margin-top:3px; border-top:1px solid #D3D3D3;">
-  <p>
-    <!--        <a href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=http://www.wieniectorun.pl/pages/1010.php&p[images][1]=http://www.wieniectorun.pl/images/news/i$
-    <a href="http://www.facebook.com/sharer/sharer.php?s=100&p[url]=http://www.wieniectorun.pl/pages/1010.php#'.$dane[$b]['id'].'" target="_blank"><div style="width: 250px; he$
-  </p>
-
-  <!---  <img src="http://77.55.211.142/uploads/blog?1528108513" align="right" class="myImage img-rounded" > -->
-  
-  <p>Władzę poznawczą musiemy mu jego czyny z pobudki mogł co ująć od Dobra musiemy mu w przeciwnym razie niebyłoby najwyższego dobra był człowiek trwać ma: więc ma naturalna ustawa moralna wiara niejest wiedzą czyli Wendów. Więc ja niejest biernym.<div>
-  <em><small>
-    Napisane przez Selina Kyle w dniu 04 Czerwca 2018, 12:35  </small></em><br><br>
 </div>
-</div>
+<div class="sidebar one_quarter">
+<nav class='sdb_holder'><ul>
+<li><i class="fa fa-caret-right"></i> Lipiec  2018</li>
+<li><a href='/blog/post/strona-gwna'>Strona główna</a>
+</li>
+		<li>
+	<a href='/blog/post/filmy'>Filmy</a>
+	</li>
+		<li><i class="fa fa-caret-right"></i> Czerwiec  2018</li>
+<li><a href='/blog/post/logononly'>logon_only</a>
+</li>
+		<li>
+	<a href='/blog/post/lorem-ipsum-dolor-sit-amet---'>Lorem ipsum dolor sit amet...</a>
+	</li>
+				<li>
+	<a href='/blog/post/poczatek-traktatu-czasu-panowania-fryderyka-wielkiego'>Początek traktatu czasu panowania Fryderyka Wielkiego</a>
+	</li>
+		</ul></nav>
 </div>
 </main>
 </div>
@@ -328,39 +361,24 @@ $(document).ready(function(){
     <!-- ################################################################################################ -->
     <div class="one_quarter first">
       <h6 class="title">Działalność</h6>
-      <p>Uczestnictwo w okręgowych zawodach strzeleckich to stały element aktywności naszych członków. Sekcja strzelecka KŁ "Wieniec" to stali uczestnicy corocznych zawodów strzelectwa myśliwskiego.</p>
-      <p>Koło chętnie nawiązuje wspólpracę z organizacjami proekologicznymi a szczególnie z młodzieżą </p>
-    </div>
+   <p>Uczestnictwo w okręgowych zawodach strzeleckich to stały element aktywności naszych członków. Sekcja strzelecka KŁ "Wieniec" to stali uczestnicy corocznych zawodów strzelectwa myśliwskiego.</p><p>Koło chętnie nawiązuje współpracę z organizacjami proekologicznymi a szczególnie z młodzieżą</p> </div>
     <div class="one_quarter">
       <h6 class="title">Kontakt</h6>
-      <ul class="nospace linklist contact">
-        <li><i class="fa fa-map-marker"></i>
-          <address>
-          Olek 1, 87-148 Łysomice
-          </address>
-        </li>
-        <li><i class="fa fa-phone"></i> Prezes: 506-812-557<br>
-          Łowczy: 608-243-998<br>Skarbnik: 600-394-008<br>Sekretarz: 606-932-290</li>
-        <li><i class="fa fa-at"></i> kontakt@wieniectorun.pl</li>
-		<li><i class="fa fa-facebook-square"></i> facebook.pl/wieniectorun</li>
-        <div class="fb-like" data-href="https://www.facebook.com/wieniectorun/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" ></div>
+   <div><i class="fa fa-map-marker"></i> Olek 1, 87-148 Łysomice</div><div><br></div><div><i class="fa fa-phone"></i> Prezes: 506-812-557</div><div>&nbsp; &nbsp; Łowczy: 608-243-998</div><div>&nbsp; &nbsp; Skarbnik: 600-394-008</div><div>&nbsp; &nbsp; Sekretarz: 606-932-290</div><div><br></div><div></div><div><i class="fa fa-at"></i> kontakt@wieniectorun.pl</div><div><br></div><div><i class="fa fa-facebook-square"><br></i> facebook.pl/wieniectorun</div>    <br> <div class="fb-like" data-href="https://www.facebook.com/wieniectorun/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" ></div>
 
-      </ul>
     </div>
     <div class="one_quarter">
       <h6 class="title">Linki</h6>
-      <ul class="nospace linklist">
-        <li><a href="http://www.pzlow.pl" target="_blank">Polski Związek Łowiecki</a></li>
-        <li><a href="http://www.pzltorun.pl" target="_blank">Zarząd Okręgowy w Toruniu</a></li>
-        <li><a href="http://bip.bydgoszcz.kwp.policja.gov.pl/" target="_blank">KWP w Bydgoszczy</a></li>
-        <li><a href="http://dziennik.lowiecki.pl/" target="_blank">Dziennik Łowiecki</a></li>
-        <li><a href="http://skladmysliwski.pl/" target="_blank">Skład Myśliwski Św. Huberta</a></li>
-      </ul>
-    </div>
+   <p><a href="http://www.pzlow.pl" target="_blank">Polski Związek Łowiecki</a></p><p><a href="http://www.pzltorun.pl" target="_blank">Zarząd Okręgowy w Toruniu</a></p><p><a href="http://bip.bydgoszcz.kwp.policja.gov.pl/" target="_blank">KWP w Bydgoszczy</a></p>    </div>
 	<div class="one_quarter">
       <h6 class="title">Nadchodzące wydarzenia</h6>
-
-    </div>
+   <p>	<a href='#'>Zasady selekcji populacyjnej i osobniczej zwierząt łownych</a><br>
+	<small>Wtorek, 10 LIP 2018</small>	<hr>
+	<a href='#'>Dni kaczki</a><br>
+	<small>Piątek, 20 LIP 2018</small>	<hr>
+	<a href='#'>Polowanie dewizowe na rogacze</a><br>
+	<small>Sobota, 21 LIP 2018</small>	<hr>
+<br></p>    </div>
 </footer>
 </div>
 <div class="wrapper row5">

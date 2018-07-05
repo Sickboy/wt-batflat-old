@@ -1,0 +1,41 @@
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="panel panel-default">
+                  <div class="panel-heading">
+                        <h3 class="panel-title">Zarządzanie</h3>
+                  </div>
+                  <div class="panel-body">
+			{if: !empty($calendar)}
+				<table  class="table table-striped no-margin">
+				<thead>
+	                                <tr>
+        	                                <th>Tytuł</th>
+                                                <th>Kolor</th>
+                                                <th>Od dnia</th>
+                                                <th>Do dnia</th>
+                                                <th class="text-right">{$lang.general.actions}</th>
+                                        </tr>
+                                </thead>
+				<tbody>
+				{loop: $calendar}
+					<tr>
+						<td>{$value.title}</td>
+						<td><i class="fa fa-circle" style="color:{$value.color}"></i></td>
+						<td>{$value.start}</td>
+						<td>{$value.stop}</td>
+						<td class="text-right">
+						<a href="{$value.delURL}" class="btn btn-xs btn-danger" data-confirm="Na pewno usunąć?">
+							<i class="fa fa-trash-o"></i> <span class="hidden-xs">{$lang.general.delete}</span>
+						</a>
+						</td>					
+				{/loop}
+				</tbody>
+				</table>
+			{else}
+                		<p class="no-margin">Brak wpisów</p>
+                	{/if}			
+                  </div>
+            </div>
+              
+        </div>
+    </div>

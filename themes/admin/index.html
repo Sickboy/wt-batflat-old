@@ -9,6 +9,9 @@
     <link href="{$bat.path}/inc/css/bootstrap-theme.min.css?v={$bat.version}" rel="stylesheet">
     <link href="{?=url(THEMES.'/admin/css/style.css?v='.$bat.version)?}" rel="stylesheet">
     <link href="https://use.fontawesome.com/56fa629212.css" rel="stylesheet">
+    <link href="{$bat.path}/inc/jscripts/calendar/fullcalendar.css" rel="stylesheet">
+    <link href="{$bat.path}/inc/jscripts/colorpicker/spectrum.css" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="{$bat.path}/inc/jscripts/bootstrap.min.js?v={$bat.version}"></script>
     <script src="{$bat.path}/inc/jscripts/bootbox.min.js?v={$bat.version}"></script>
@@ -16,6 +19,10 @@
     <script src="{$bat.path}/inc/jscripts/tinynav.min.js?v={$bat.version}"></script>
     <script src="{?=url(THEMES.'/admin/js/kalypto.min.js?v='.$bat.version)?}"></script>
     <script src="{?=url(THEMES.'/admin/js/selectator.min.js?v='.$bat.version)?}"></script>
+    <script src="{$bat.path}/inc/jscripts/calendar/lib/moment.min.js"></script>
+    <script src="{$bat.path}/inc/jscripts/calendar/fullcalendar.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="{$bat.path}/inc/jscripts/colorpicker/spectrum.js"></script> 
     <script>
         var batflat = {token:"{$_SESSION['token']}", url:"{?=url()?}", admin:"{?=ADMIN?}"};
     </script>

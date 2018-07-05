@@ -1,43 +1,51 @@
 {template: inc/header.html}
 
-<!-- Page Header -->
-{if: $post.cover_photo}
-<header class="intro-header" style="background-image: url('{$post.cover_url}')">
-{else}
-<header class="intro-header" style="background-image: url('{$bat.theme}/img/default-bg.jpg')">
-{/if}
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+<div class="wrapper row3">
+  <main class="hoc container clear">
+            <div class="three_quarter first">
                 <div class="post-heading">
                     <h1>{$post.title}</h1>
-                    <span class="post-meta">{?= sprintf($lang.blog.posted, $post.author.name, $post.published_at) ?}</span>
                 </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- Post Content -->
-<article>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+           
                 {if: $bat.notify}
                 <div id="notify" class="alert alert-{$bat.notify.type}">{$bat.notify.text}</div>
                 {/if}
                 {$post.content}
-                <p><i class="fa fa-tags"></i> {loop: $post.tags}{if: $key != 0}, {/if}<a href="{$value.url}">{$value.name}</a>{/loop}</p>
-            </div>
-        </div>
-        <div class="row">
+                <span class="post-meta">{?= sprintf($lang.blog.posted, $post.author.name, $post.published_at) ?}</span>
+             <br><br>   <p><i class="fa fa-tags"></i> {loop: $post.tags}{if: $key != 0}, {/if}<a href="{$value.url}">{$value.name}</a>{/loop}</p>
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <hr />
                 <div id="disqus_thread"></div>
                 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-            </div>
-        </div>
-    </div>
-</article>
-
+        </div></div>
+<div class="sidebar one_quarter">
+<nav class='sdb_holder'><ul>
+{?  $lm = '' ?}
+{? $miesiac = array( '01' => 'Styczeń', '02' => 'Luty', '03' => 'Marzec', '04' => 'Kwiecień', '05' => 'Maj', '06' => 'Czerwiec', '07' => 'Lipiec', '08' => 'Sierpień', '09' => 'Wrzesień', '10' => 'Październik', '11' => 'Listopad', '12' => 'Grudzień' ) ?}
+{loop: $post.aaa}
+{if: $lm == date('m', $value.published_at)}
+	{if: $value.logon_only == 1}
+        {if: $this->core->getUserInfo('username') != NULL}
+	<li>
+	<a href='/blog/post/{$value.slug}'>{$value.title}</a>
+	</li>
+	{? $lm = date('m', $value.published_at) ?}
+    	{/if}
+        {elseif: $value.logon_only == 0}
+	<li>
+	<a href='/blog/post/{$value.slug}'>{$value.title}</a>
+	</li>
+	{? $lm = date('m', $value.published_at) ?}
+	{/if}
+{else}
+<li><i class="fa fa-caret-right"></i> {?= sprintf($miesiac[date('m', $value.published_at)]) ?}  {?= sprintf(date('Y', $value.published_at)) ?}</li>
+<li><a href='/blog/post/{$value.slug}'>{$value.title}</a>
+</li>
+{? $lm = date('m', $value.published_at) ?}
+{/if}
+{/loop}
+</ul></nav>
+</div>	
+</main>
+</div>
 {template: inc/footer.html}

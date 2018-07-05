@@ -1,0 +1,11 @@
+{loop: $items}
+	<a href='#'>{$value.title}</a><br>
+	<?php 
+		//echo date("l, Y M d", strtotime($value.start));  
+		$miesiac = array( '01' => 'STY', '02' => 'LUT', '03' => 'MAR', '04' => 'KWI', '05' => 'MAJ', '06' => 'CZE', '07' => 'LIP', '08' => 'SIE', '09' => 'WRZ', '10' => 'PAZ', '11' => 'LIS', '12' => 'GRU' );
+		$dzien = array( '1' => 'Poniedziałek', '2' => 'Wtorek', '3' => 'Środa', '4' => 'Czwartek', '5' => 'Piątek', '6' => 'Sobota','7' => 'Niedziela');
+		echo '<small>'.$dzien[date('N', strtotime($value.start))].', '.date('d', strtotime($value.start)).' '.$miesiac[date('m', strtotime($value.start))].' '.date('Y', strtotime($value.start)).'</small>';	
+
+?>
+	<hr>
+{/loop}

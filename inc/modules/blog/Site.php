@@ -138,6 +138,8 @@ class Site extends SiteModule
                 $vals = array_values($this->core->lang['blog']);
                 $assign['published_at'] = str_replace($keys, $vals, strtolower($assign['published_at']));
 
+		$assign['aaa'] = $this->db('blog')->select('title')->select('slug')->select('published_at')->select('logon_only')->desc('published_at')->toArray();
+
                 $this->setTemplate("post.html");
                 $this->tpl->set('page', ['title' => $assign['title'], 'desc' => trim(mb_strimwidth(htmlspecialchars(strip_tags(preg_replace('/\{(.*?)\}/', null, $assign['content']))), 0, 155, "...", "utf-8"))]);
                 $this->tpl->set('post', $assign);
@@ -236,6 +238,8 @@ class Site extends SiteModule
             $this->tpl->set('next', $next);
         }
         
+	$assign['aaa'] = $this->db('blog')->select('title')->select('slug')->select('published_at')->select('logon_only')->desc('published_at')->toArray();
+
         $this->setTemplate("blog.html");
 
         $this->tpl->set('page', ['title' => $assign['title'], 'desc' => $assign['desc']]);
@@ -326,6 +330,8 @@ class Site extends SiteModule
             $next['url'] = url('blog/tag/'.$slug.'/'.($page+1));
             $this->tpl->set('next', $next);
         }
+
+	$assign['aaa'] = $this->db('blog')->select('title')->select('slug')->select('published_at')->select('logon_only')->desc('published_at')->toArray();
         
         $this->setTemplate("blog.html");
 

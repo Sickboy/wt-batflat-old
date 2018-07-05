@@ -1,7 +1,7 @@
 <section id="devbar">
     <ul class="navbar clearfix">
         <li class="logo" data-toggle="tooltip" title="Batflat 1.3.5">
-            <img src="http://77.55.211.142/themes/admin/img/logo.svg" alt="logo">
+            <img src="http://77.55.211.142/themes/admin/img/logo.svg?t=8600f89a77a0" alt="logo">
         </li>
         <li data-toggle="tooltip" title="Status code">
             <a href="#info" data-toggle="tab">
@@ -9,16 +9,16 @@
         </li>
         <li data-toggle="tooltip" title="Execution time">
             <span>
-                <i class="fa fa-clock-o"></i> 1085.96ms
+                <i class="fa fa-clock-o"></i> 712.59ms
             </span>
         </li>
         <li data-toggle="tooltip" title="Memory usage">
             <span>
-                <i class="fa fa-server"></i> 0.57MB
+                <i class="fa fa-server"></i> 0.58MB
             </span>
         </li>
         <li data-toggle="tooltip" title="Database queries">
-            <a href="#database" data-toggle="tab"><i class="fa fa-database"></i> 26</a>
+            <a href="#database" data-toggle="tab"><i class="fa fa-database"></i> 36</a>
         </li>
         <li data-toggle="tooltip" title="Requests">
             <a href="#requests" data-toggle="tab"><i class="fa fa-rocket"></i> 0</a>
@@ -34,11 +34,11 @@
         <div id="info" class="tab-pane active">
             <ul>
                 <li>HTTP status: 200 OK</li>
-                <li>Route: /jak-bezpiecznie-polowac</li>
+                <li>Route: /blog/tag/polowanie</li>
                 <li>Batflat version: 1.3.5</li>
                 <li>PHP version: 7.0.30-0ubuntu0.16.04.1</li>
                 <li>SQLite version: 3.11.0</li>
-                <li>Batflat modules: blog, pages, galleries, video, navigation, snippets, settings, users, contact, langswitcher, devbar</li>
+                <li>Batflat modules: blog, pages, galleries, video, calendar, navigation, snippets, settings, users, langswitcher, contact, devbar</li>
                 <li>PHP extensions: Core, date, libxml, openssl, pcre, zlib, filter, hash, Reflection, SPL, session, standard, apache2handler, mysqlnd, PDO, xml, calendar, ctype, curl, dom, mbstring, fileinfo, ftp, gd, gettext, iconv, intl, json, exif, mcrypt, mysqli, pdo_mysql, pdo_sqlite, Phar, posix, propro, raphf, readline, shmop, SimpleXML, sockets, sqlite3, sysvmsg, sysvsem, sysvshm, tokenizer, wddx, xmlreader, xmlwriter, xsl, zip, http, Zend OPcache</li>
             </ul>
         </div>
@@ -50,6 +50,8 @@
                                 <li>SELECT id FROM galleries WHERE first = ? LIMIT 1</li>
                                 <li>SELECT * FROM galleries_items WHERE gallery = ? ORDER BY id ASC</li>
                                 <li>SELECT * FROM videos</li>
+                                <li>SELECT * FROM calendar</li>
+                                <li>SELECT * FROM calendar WHERE start > ? ORDER BY start ASC LIMIT 3</li>
                                 <li>SELECT * FROM snippets</li>
                                 <li>SELECT * FROM navs</li>
                                 <li>SELECT navs_items.*,pages.slug FROM navs_items LEFT JOIN pages ON pages.id = navs_items.page WHERE navs_items.nav = ? AND navs_items.lang = ? ORDER BY `order` ASC</li>
@@ -68,7 +70,15 @@
                                 <li>SELECT * FROM pages LEFT JOIN navs_items ON pages.id = navs_items.page WHERE navs_items.parent = ?</li>
                                 <li>SELECT * FROM pages LEFT JOIN navs_items ON pages.id = navs_items.page WHERE navs_items.parent = ?</li>
                                 <li>SELECT * FROM pages LEFT JOIN navs_items ON pages.id = navs_items.page WHERE navs_items.parent = ?</li>
-                                <li>SELECT * FROM pages WHERE slug = ? AND lang = ?</li>
+                                <li>SELECT * FROM pages LEFT JOIN navs_items ON pages.id = navs_items.page WHERE navs_items.parent = ?</li>
+                                <li>SELECT * FROM blog_tags WHERE slug = ?</li>
+                                <li>SELECT * FROM blog LEFT JOIN blog_tags_relationship ON blog_tags_relationship.blog_id = blog.id WHERE blog_tags_relationship.tag_id = ? AND lang = ? AND status = ? AND published_at <= ? ORDER BY published_at DESC LIMIT 5 OFFSET 0</li>
+                                <li>SELECT * FROM users WHERE id = ?</li>
+                                <li>SELECT * FROM blog_tags LEFT JOIN blog_tags_relationship ON blog_tags.id = blog_tags_relationship.tag_id WHERE blog_tags_relationship.blog_id = ?</li>
+                                <li>SELECT * FROM users WHERE id = ?</li>
+                                <li>SELECT * FROM blog_tags LEFT JOIN blog_tags_relationship ON blog_tags.id = blog_tags_relationship.tag_id WHERE blog_tags_relationship.blog_id = ?</li>
+                                <li>SELECT COUNT(*) AS count FROM blog LEFT JOIN blog_tags_relationship ON blog_tags_relationship.blog_id = blog.id WHERE status = ? AND lang = ? AND published_at <= ? AND blog_tags_relationship.tag_id = ?</li>
+                                <li>SELECT title,slug,published_at,logon_only FROM blog ORDER BY published_at DESC</li>
                                 <li>SELECT * FROM users WHERE id = ?</li>
                             </ul>
         </div>
@@ -115,7 +125,7 @@
     [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Fedora; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
     [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
     [HTTP_DNT] => 1
-    [HTTP_REFERER] => http://77.55.211.142/
+    [HTTP_REFERER] => http://77.55.211.142/blog/post/strona-gwna
     [HTTP_ACCEPT_ENCODING] => gzip, deflate
     [HTTP_ACCEPT_LANGUAGE] => pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7
     [HTTP_COOKIE] => bat=2fnah75u714ij97liacim8goq7; PHPSESSID=mivsq48kbfu3soa4ooj1stka73
@@ -133,19 +143,19 @@
     [CONTEXT_DOCUMENT_ROOT] => /var/www/batflat
     [SERVER_ADMIN] => [no address given]
     [SCRIPT_FILENAME] => /var/www/batflat/index.php
-    [REMOTE_PORT] => 9724
-    [REDIRECT_URL] => /jak-bezpiecznie-polowac
+    [REMOTE_PORT] => 53760
+    [REDIRECT_URL] => /blog/tag/polowanie
     [GATEWAY_INTERFACE] => CGI/1.1
     [SERVER_PROTOCOL] => HTTP/1.1
     [REQUEST_METHOD] => GET
     [QUERY_STRING] => 
-    [REQUEST_URI] => /jak-bezpiecznie-polowac
+    [REQUEST_URI] => /blog/tag/polowanie
     [SCRIPT_NAME] => /index.php
     [PHP_SELF] => /index.php
-    [REQUEST_TIME_FLOAT] => 1530188555.115
-    [REQUEST_TIME] => 1530188555
+    [REQUEST_TIME_FLOAT] => 1530795488.612
+    [REQUEST_TIME] => 1530795488
     [HTTP_X_FORWARDED_PORT] => 
-    [PATH_INFO] => /jak-bezpiecznie-polowac
+    [PATH_INFO] => /blog/tag/polowanie
 )
 </pre></dd>
                     </dl>

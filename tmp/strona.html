@@ -8,12 +8,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link rel="stylesheet" href="http://77.55.211.142/inc/css/bootstrap.min.css">
-<link href="http://77.55.211.142/themes/wt/css/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="http://77.55.211.142/themes/wt/css/layout.css" rel="stylesheet" type="text/css" media="all"> 
 <!--- <link href="http://77.55.211.142/themes/wt/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="http://77.55.211.142/inc/jscripts/bootstrap.min.js"></script>
+    <link href="http://77.55.211.142/inc/jscripts/calendar/fullcalendar.css" rel="stylesheet">
+    <script src="http://77.55.211.142/inc/jscripts/calendar/lib/moment.min.js"></script>
+    <script src="http://77.55.211.142/inc/jscripts/calendar/fullcalendar.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <style>
+a{color:#FF8F2B;}
+a:active, a:focus{background:transparent;}
 .navbar {
     position: relative;
     min-height: 50px;
@@ -50,14 +56,14 @@
   background-color: #423424;
 }
 .navbar-custom .navbar-toggle {
-  border-color: #cccccc;
+  border-color: #FF8F2B;
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
   background-color: #FF8F2B;
 }
 .navbar-custom .navbar-toggle .icon-bar {
-  background-color: #cccccc;
+  background-color: #FF8F2B;
 }
 .navbar-custom .navbar-collapse,
 .navbar-custom .navbar-form {
@@ -128,7 +134,7 @@
     background-color:rgba(0,0,0,.6);
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    border: 1px solid #ccc;
+    border: 1px solid #423424;
     border: 1px solid rgba(0,0,0,.15);
     border-radius: 4px;
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
@@ -184,8 +190,8 @@ $(document).ready(function(){
   <div id="topbar" class="hoc clear">
     <div class="fl_left">
       <ul class="nospace inline pushright">
-	        <li><a href="/admin/"><i class="fa fa-sign-in"></i> Zaloguj </a> </li>
-   	   
+		<li><i class="fa fa-user"></i>Witaj,  admin <li><a href="http://77.55.211.142/admin/logout?t=32ba2a00fd5b"><i class="fa fa-sign-out"></i> Wyloguj </a> </li>
+	   
    </ul>
     </div>
     <div class="fl_right">
@@ -242,12 +248,12 @@ $(document).ready(function(){
 	    	    	    	    <li ><a href="http://77.55.211.142/filmy">Filmy</a></li>
 	    	            </ul>
     </li>
-            <li class="dropdown active">
+            <li class="dropdown ">
         <a href="#" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
             O polowaniu            <span class="caret"></span>
         </a>
         <ul class="dropdown-menu">
-            	    	    <li class="active"><a href="http://77.55.211.142/jak-bezpiecznie-polowac">Jak bezpiecznie polować</a></li>
+            	    	    <li ><a href="http://77.55.211.142/jak-bezpiecznie-polowac">Jak bezpiecznie polować</a></li>
 	    	    	    	    <li ><a href="http://77.55.211.142/metody-polowan">Metody polowań</a></li>
 	    	    	    	    <li ><a href="http://77.55.211.142/reakcja-zwierzyny-na-strzal">Reakcja zwierzyny</a></li>
 	    	    	    	    <li ><a href="http://77.55.211.142/urzadzenia-lowieckie">Urządzenia łowieckie</a></li>
@@ -255,6 +261,10 @@ $(document).ready(function(){
 	    	            </ul>
     </li>
                    <li class="">
+        <a href="http://77.55.211.142/kalendarz" >Kalendarz</a>
+    </li>
+         
+                  <li class="">
         <a href="http://77.55.211.142/kontakt" >Kontakt</a>
     </li>
          
@@ -271,14 +281,14 @@ $(document).ready(function(){
   <div id="breadcrumb" class="hoc clear">
     <ul>
       <li><a href="#">Strona główna</a></li>
-      <li><a href="#">Jak bezpiecznie polować</a></li>
+      <li><a href="#">404</a></li>
     </ul>
   </div>
 </div>
 <div class="wrapper row3">
   <main class="hoc container clear">
     <div class="content">
-        <p><b style="transition: all 0.3s ease-in-out; color: rgb(74, 74, 74); font-family: Verdana, Geneva, sans-serif; font-size: 14px;">Jak bezpiecznie polować</b><br style="transition: all 0.3s ease-in-out; color: rgb(74, 74, 74); font-family: Verdana, Geneva, sans-serif; font-size: 14px;"></p><hr style="box-sizing: border-box; transition: all 0.3s ease-in-out; width: 978px; height: 1px; border-top-color: rgb(238, 238, 238); margin-top: 20px; margin-bottom: 20px; color: rgb(74, 74, 74); font-family: Verdana, Geneva, sans-serif; font-size: 14px;"><p style="transition: all 0.3s ease-in-out; color: rgb(74, 74, 74); font-family: Verdana, Geneva, sans-serif; font-size: 14px;">Myśliwy jest odpowiedzialny za bezpieczne używanie broni i amunicji oraz zobowiązany jest do przestrzegania następujących zasad:</p><p style="transition: all 0.3s ease-in-out; color: rgb(74, 74, 74); font-family: Verdana, Geneva, sans-serif; font-size: 14px;"><strong style="transition: all 0.3s ease-in-out;">1.</strong>&nbsp;Należy używać broni myśliwskiej sprawnej technicznie;<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">2.</strong>&nbsp;Broń należy przystrzeliwać co najmniej raz w roku;<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">3.</strong>&nbsp;Każdorazowo przez załadowaniem broni należy sprawdzić drożność luf;<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">4.</strong>&nbsp;Przy przechodzeniu lub przejeżdżaniu przez tereny zabudowane, albo poruszaniu się pojazdem, w obwodzie, w którym myśliwy wykonuje polowanie, broń powinna być rozładowana.<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">5.</strong>&nbsp;Poza własnym obwodem, broń zawsze trzymamy w futerale!<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">6.</strong>&nbsp;Na polowaniu zbiorowym broń wolno załadować dopiero po zajęciu stanowiska przed pierwszym pędzeniem.<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">7.</strong>&nbsp;Na polowaniu zbiorowym między pędzeniami myśliwy musi usunąć naboje z komór nabojowych przed zejściem ze stanowiska. Ponowne wprowadzenie nabojów do komór nabojowych może nastąpić dopiero po zajęciu stanowiska w następnym pędzeniu.<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">8.</strong>&nbsp;Po zakończeniu ostatniego pędzenia, przed zejściem ze stanowiska, myśliwy musi broń rozładować.<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">9.</strong>&nbsp;Używanie optycznych przyrządów celowniczych na polowaniu zbiorowym jest możliwe pod warunkiem, że luneta ma ustawioną krotność nie większą niż trzy. Ograniczenie krotności lunety nie dotyczy polowań zbiorowych z ambon.<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">10</strong>. Podczas przechodzenia przez przeszkody terenowe, a w szczególności rowy, kładki, płoty, wchodzenia i schodzenia z ambony oraz podczas przerw w polowaniu podczas których broń nie jest odkładana, myśliwy musi usunąć naboje z komór nabojowych.<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">11.</strong>&nbsp;W czasie poruszania się w terenie nierównym, zakrzewionym, grząskim, śliskim, w głębokim śniegu, w momencie karcenia psa lub odbierania od niego aportu, troczenia ptactwa broń musi być zabezpieczona przed możliwością oddania strzału.<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">12.</strong>&nbsp;Odłożona w czasie przerw w polowaniu broń musi być rozładowana, znajdować się w pobliżu i w polu widzenia myśliwego oraz być zabezpieczona przed upadkiem.<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">13.</strong>&nbsp;Nie celuje się i nie strzela się do zwierzyny, jeżeli:<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">A</strong>. Na linii strzału znajdują się myśliwi lub inne osoby albo zwierzęta gospodarskie, budynki lub pojazdy, a odległość od nich nie gwarantuje warunków bezpiecznego strzału;<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">B</strong>. Zwierzyna znajduje się na szczytach wzniesień;<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">C.</strong>&nbsp;Zwierzyna znajduje się w odległości mniejszej niż 200 metrów od pracujących maszyn rolniczych.<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">14.</strong>&nbsp;Celowanie do zwierzyny i oddanie strzału jest dopuszczalne dopiero po osobistym dokładnym rozpoznaniu zwierzyny oraz w warunkach gwarantujących skuteczność strzału i możliwość podniesienia strzelonej zwierzyny oraz bezpieczeństwo otoczenia.<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">15.</strong>&nbsp;Przyspiesznika używa się jedynie na polowaniu indywidualnym, przy czym jego naciąganie może nastąpić dopiero po dokładnym rozpoznaniu zwierzyny i złożeniu się do strzału; jeżeli strzał nie nastąpił, broń należy zabezpieczyć przed możliwością oddania strzału, a następnie zwolnić przyspiesznik.<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">16.</strong>&nbsp;Na polowaniu zbiorowym nie wolno strzelać wzdłuż linii myśliwych; za strzał wzdłuż linii myśliwych, uważa się strzał, przy którym pocisk kulowy lub skrajne śruty wiązki przechodzą lub w przedłużeniu przeszłyby w odległości mniejszej niż 10 m od stanowiska sąsiada;<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">17.&nbsp;</strong>Na polowaniu zbiorowym nie wolno strzelać ze stanowiska na linii myśliwych w kierunku stanowisk na flankach i ze stanowisk na flankach w kierunku linii myśliwych, jeżeli odległość między tymi stanowiskami lub ukształtowanie terenu nie zapewnia bezpieczeństwa;<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">18.</strong>&nbsp;Na polowaniu zbiorowym nie wolno zajmować stanowisk w rowach, wykopach i zagłębieniach terenu;<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">19.</strong>&nbsp;Na polowaniu zbiorowym po zajęciu stanowiska myśliwy jest obowiązany przyjąć pozycję stojącą lub siedzącą;<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">20.</strong>&nbsp;Na polowaniu zbiorowym oddanie strzału może nastąpić jedynie z pozycji stojącej; ograniczenie to nie dotyczy strzałów oddawanych z ambon;<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">21.</strong>&nbsp;Na polowaniu zbiorowym strzał kulą do zwierzyny znajdującej się poza miotem jest dopuszczalny na odległość nie większą niż 100 m;<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">22.</strong>&nbsp;Na polowaniu zbiorowym strzał kulą do zwierzyny znajdującej się w miocie jest dopuszczalny, z zachowaniem szczególnej ostrożności, na odległość nie większą niż 40 m , a w przypadku polowania zbiorowego z ambon – na odległość nie większą niż 80 m;<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">23.</strong>&nbsp;Na polowaniu zbiorowym oddawanie strzału do zwierzyny płowej w miot może nastąpić tylko za zgodą prowadzącego polowanie, w warunkach gwarantujących bezpieczeństwo; zgoda taka nie jest wymagana podczas polowania zbiorowego z ambon;<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">24.</strong>&nbsp;Na polowaniu zbiorowym nie wolno strzelać do zwierzyny znajdującej się w miocie, jeżeli naganka znajduje się od myśliwego w odległości mniejszej niż 150 m w terenie otwartym i w odległości mniejszej niż 100 m w terenie leśnym;<br style="transition: all 0.3s ease-in-out;">Wolno strzelać do ptactwa w locie w kierunku naganki lub w kierunku innych myśliwych, jeżeli strzał oddaje się w górę pod kątem nie mniejszym niż 60°, a na linii strzału nie ma gałęzi lub innych przeszkód;<br style="transition: all 0.3s ease-in-out;"><strong style="transition: all 0.3s ease-in-out;">26.</strong>&nbsp;Na polowaniu zbiorowym oddawanie strzału między poszczególnymi pędzeniami jest dopuszczalne za zgodą prowadzącego polowanie tylko do zwierzyny postrzelonej lub chorej.</p>     </div>
+        <p style="text-align: center; ">Niestety, taka strona nie istnieje.<br></p>     </div>
     <div class="clear"></div>
   </main>
 </div>
@@ -298,39 +308,24 @@ $(document).ready(function(){
     <!-- ################################################################################################ -->
     <div class="one_quarter first">
       <h6 class="title">Działalność</h6>
-      <p>Uczestnictwo w okręgowych zawodach strzeleckich to stały element aktywności naszych członków. Sekcja strzelecka KŁ "Wieniec" to stali uczestnicy corocznych zawodów strzelectwa myśliwskiego.</p>
-      <p>Koło chętnie nawiązuje wspólpracę z organizacjami proekologicznymi a szczególnie z młodzieżą </p>
-    </div>
+   <p>Uczestnictwo w okręgowych zawodach strzeleckich to stały element aktywności naszych członków. Sekcja strzelecka KŁ "Wieniec" to stali uczestnicy corocznych zawodów strzelectwa myśliwskiego.</p><p>Koło chętnie nawiązuje współpracę z organizacjami proekologicznymi a szczególnie z młodzieżą</p> </div>
     <div class="one_quarter">
       <h6 class="title">Kontakt</h6>
-      <ul class="nospace linklist contact">
-        <li><i class="fa fa-map-marker"></i>
-          <address>
-          Olek 1, 87-148 Łysomice
-          </address>
-        </li>
-        <li><i class="fa fa-phone"></i> Prezes: 506-812-557<br>
-          Łowczy: 608-243-998<br>Skarbnik: 600-394-008<br>Sekretarz: 606-932-290</li>
-        <li><i class="fa fa-at"></i> kontakt@wieniectorun.pl</li>
-		<li><i class="fa fa-facebook-square"></i> facebook.pl/wieniectorun</li>
-        <div class="fb-like" data-href="https://www.facebook.com/wieniectorun/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" ></div>
+   <div><i class="fa fa-map-marker"></i> Olek 1, 87-148 Łysomice</div><div><br></div><div><i class="fa fa-phone"></i> Prezes: 506-812-557</div><div>&nbsp; &nbsp; Łowczy: 608-243-998</div><div>&nbsp; &nbsp; Skarbnik: 600-394-008</div><div>&nbsp; &nbsp; Sekretarz: 606-932-290</div><div><br></div><div></div><div><i class="fa fa-at"></i> kontakt@wieniectorun.pl</div><div><br></div><div><i class="fa fa-facebook-square"><br></i> facebook.pl/wieniectorun</div>    <br> <div class="fb-like" data-href="https://www.facebook.com/wieniectorun/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="false" ></div>
 
-      </ul>
     </div>
     <div class="one_quarter">
       <h6 class="title">Linki</h6>
-      <ul class="nospace linklist">
-        <li><a href="http://www.pzlow.pl" target="_blank">Polski Związek Łowiecki</a></li>
-        <li><a href="http://www.pzltorun.pl" target="_blank">Zarząd Okręgowy w Toruniu</a></li>
-        <li><a href="http://bip.bydgoszcz.kwp.policja.gov.pl/" target="_blank">KWP w Bydgoszczy</a></li>
-        <li><a href="http://dziennik.lowiecki.pl/" target="_blank">Dziennik Łowiecki</a></li>
-        <li><a href="http://skladmysliwski.pl/" target="_blank">Skład Myśliwski Św. Huberta</a></li>
-      </ul>
-    </div>
+   <p><a href="http://www.pzlow.pl" target="_blank">Polski Związek Łowiecki</a></p><p><a href="http://www.pzltorun.pl" target="_blank">Zarząd Okręgowy w Toruniu</a></p><p><a href="http://bip.bydgoszcz.kwp.policja.gov.pl/" target="_blank">KWP w Bydgoszczy</a></p>    </div>
 	<div class="one_quarter">
       <h6 class="title">Nadchodzące wydarzenia</h6>
-
-    </div>
+   <p>	<a href='#'>Zasady selekcji populacyjnej i osobniczej zwierząt łownych</a><br>
+	<small>Wtorek, 10 LIP 2018</small>	<hr>
+	<a href='#'>Dni kaczki</a><br>
+	<small>Piątek, 20 LIP 2018</small>	<hr>
+	<a href='#'>Polowanie dewizowe na rogacze</a><br>
+	<small>Sobota, 21 LIP 2018</small>	<hr>
+<br></p>    </div>
 </footer>
 </div>
 <div class="wrapper row5">

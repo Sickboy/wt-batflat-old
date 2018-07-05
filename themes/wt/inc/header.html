@@ -8,12 +8,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link rel="stylesheet" href="{$bat.path}/inc/css/bootstrap.min.css">
-<link href="{$bat.theme}/css/layout.css" rel="stylesheet" type="text/css" media="all">
+<link href="{$bat.theme}/css/layout.css" rel="stylesheet" type="text/css" media="all"> 
 <!--- <link href="{$bat.theme}/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="{$bat.path}/inc/jscripts/bootstrap.min.js"></script>
+    <link href="{$bat.path}/inc/jscripts/calendar/fullcalendar.css" rel="stylesheet">
+    <script src="{$bat.path}/inc/jscripts/calendar/lib/moment.min.js"></script>
+    <script src="{$bat.path}/inc/jscripts/calendar/fullcalendar.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <style>
+a{color:#FF8F2B;}
+a:active, a:focus{background:transparent;}
 .navbar {
     position: relative;
     min-height: 50px;
@@ -50,14 +56,14 @@
   background-color: #423424;
 }
 .navbar-custom .navbar-toggle {
-  border-color: #cccccc;
+  border-color: #FF8F2B;
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
   background-color: #FF8F2B;
 }
 .navbar-custom .navbar-toggle .icon-bar {
-  background-color: #cccccc;
+  background-color: #FF8F2B;
 }
 .navbar-custom .navbar-collapse,
 .navbar-custom .navbar-form {
@@ -128,7 +134,7 @@
     background-color:rgba(0,0,0,.6);
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
-    border: 1px solid #ccc;
+    border: 1px solid #423424;
     border: 1px solid rgba(0,0,0,.15);
     border-radius: 4px;
     -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
