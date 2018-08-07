@@ -12,6 +12,7 @@ class Site extends SiteModule
     {
         $this->_showCalendar();
 	$this->_incEvent();
+	$this->_incoming();
     }
 
     public function routes()
@@ -53,5 +54,12 @@ class Site extends SiteModule
 	$today =  date('Y-m-d');
 	$items = $this->db('calendar')->where('start', '>' , $today)->asc('start')->limit(3)->toArray();
 	$this->tpl->set('incomingEvent', $this->draw('event.html', ['items' => $items ]));
+    }
+
+    private function _incoming()
+    {
+            $ile = 4;
+            $events = $this->core->db('calendar')->where('start', '>' , date("Y-m-d"))->limit($ile)->asc('start')->toArray();
+            $this->tpl->set('incoming', $this->draw('incoming.html', ['events' => $events]));
     }
 }

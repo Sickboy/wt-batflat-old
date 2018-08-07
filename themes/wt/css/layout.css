@@ -225,18 +225,18 @@ input:focus, textarea:focus, *:required:focus{border-color:#FF8F2B;}
 .element .excerpt time{color:#EAEAEA; background-color:#272421;}
 /* Month name colour pre-set + the choice of adding specific header colours for different months (3 provided as examples) */
 .element .excerpt time strong{color:#FFFFFF; background-color:#3C3733;}
-.element .excerpt time[data-title*="STY"] strong{background-color:#EEEEEE;}/*biały*/
-.element .excerpt time[data-title*="LUT"] strong{background-color:#CCCCCC ;}/*szary*/
-.element .excerpt time[data-title*="MAR"] strong{background-color:#9999FF ;}/*fioletowy*/
-.element .excerpt time[data-title*="KWI"] strong{background-color:#009900 ;}/*zielony*/
-.element .excerpt time[data-title*="MAJ"] strong{background-color:#FF33CC ;}/*różowy*/
-.element .excerpt time[data-title*="CZE"] strong{background-color:#FFFF00 ;}/*żółty*/
-.element .excerpt time[data-title*="LIP"] strong{background-color:#66CCFF ;}/*niebieski*/
-.element .excerpt time[data-title*="SIE"] strong{background-color:#FF9933 ;}/*pomarańczowy*/
-.element .excerpt time[data-title*="WRZ"] strong{background-color:#CC6600 ;}/*brąz*/
-.element .excerpt time[data-title*="PAŹ"] strong{background-color:#FFFFCC ;}/*kremowy*/
-.element .excerpt time[data-title*="LIS"] strong{background-color:#BBBBBB ;}/*srebrny*/
-.element .excerpt time[data-title*="GRU"] strong{background-color:#000099 ;}/*granatowy*/
+.element .excerpt time[data-title*="Jan"] strong{background-color:#EEEEEE;}/*biały*/
+.element .excerpt time[data-title*="Feb"] strong{background-color:#CCCCCC ;}/*szary*/
+.element .excerpt time[data-title*="Mar"] strong{background-color:#9999FF ;}/*fioletowy*/
+.element .excerpt time[data-title*="Apr"] strong{background-color:#009900 ;}/*zielony*/
+.element .excerpt time[data-title*="May"] strong{background-color:#FF33CC ;}/*różowy*/
+.element .excerpt time[data-title*="Jun"] strong{background-color:#FFFF00 ;}/*żółty*/
+.element .excerpt time[data-title*="Jul"] strong{background-color:#66CCFF ;}/*niebieski*/
+.element .excerpt time[data-title*="Aug"] strong{background-color:#FF9933 ;}/*pomarańczowy*/
+.element .excerpt time[data-title*="Sep"] strong{background-color:#CC6600 ;}/*brąz*/
+.element .excerpt time[data-title*="Oct"] strong{background-color:#FFFFCC ;}/*kremowy*/
+.element .excerpt time[data-title*="Nov"] strong{background-color:#BBBBBB ;}/*srebrny*/
+.element .excerpt time[data-title*="Dec"] strong{background-color:#000099 ;}/*granatowy*/
 
 .btn, .btn.inverse:hover{color:#FFFFFF; background-color:#FF8F2B; border-color:#FF8F2B;}
 .btn:hover, .btn.inverse{color:inherit; background-color:transparent; border-color:inherit;}

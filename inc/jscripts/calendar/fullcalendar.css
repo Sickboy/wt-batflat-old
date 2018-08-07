@@ -316,7 +316,8 @@ temporary rendered events).
 /* Scrolling Container
 --------------------------------------------------------------------------------------------------*/
 .fc-scroller {
-  -webkit-overflow-scrolling: touch; }
+  -webkit-overflow-scrolling: touch;
+  overflow-y: hidden !important; }
 
 /* TODO: move to agenda/basic */
 .fc-scroller > .fc-day-grid,

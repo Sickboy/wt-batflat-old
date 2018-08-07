@@ -1,9 +1,9 @@
 <?php
 return [
     'name'          =>  'Kalendarz',
-    'description'   =>  'Kalendarz',
+    'description'   =>  'Kalendarz. Najbliższe nadchodzące wydarzenia wywołuje się funkcją szablonu {$incoming}.',
     'author'        =>  'pl',
-    'version'       =>  '1.0',
+    'version'       =>  '1.1',
     'compatibility'    =>    '1.3.*',                                // Compatibility with Batflat version
     'icon'          =>  'calendar',                                 // Icon from http://fontawesome.io/icons/
 

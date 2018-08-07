@@ -9,12 +9,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <link rel="stylesheet" href="{$bat.path}/inc/css/bootstrap.min.css">
 <link href="{$bat.theme}/css/layout.css" rel="stylesheet" type="text/css" media="all"> 
+<link href="{$bat.theme}/css/timeline.css" rel="stylesheet" type="text/css" media="all">
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
 <!--- <link href="{$bat.theme}/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="{$bat.path}/inc/jscripts/bootstrap.min.js"></script>
     <link href="{$bat.path}/inc/jscripts/calendar/fullcalendar.css" rel="stylesheet">
     <script src="{$bat.path}/inc/jscripts/calendar/lib/moment.min.js"></script>
     <script src="{$bat.path}/inc/jscripts/calendar/fullcalendar.js"></script>
+    <script src="{$bat.path}/inc/jscripts/calendar/locale/pl.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
 <style>
@@ -191,9 +194,9 @@ $(document).ready(function(){
     <div class="fl_left">
       <ul class="nospace inline pushright">
 	{if: $this->core->getUserInfo('username') != NULL}
-	<li><i class="fa fa-user"></i>Witaj,  {?= sprintf($this->core->getUserInfo('username')) ?} <li><a href="<?php echo url('/admin/logout') ?>"><i class="fa fa-sign-out"></i> Wyloguj </a> </li>
+	<li><i class="fa fa-user"></i>Witaj,  {?= sprintf($this->core->getUserInfo('username')) ?} <li><a href="<?php echo url('/admin/logout') ?>"><i class="fas fa-sign-out-alt"></i> Wyloguj </a> </li>
 	{else}
-        <li><a href="/admin/"><i class="fa fa-sign-in"></i> Zaloguj </a> </li>
+        <li><a href="/admin/"><i class="fas fa-sign-in-alt"></i> Zaloguj </a> </li>
    	{/if}   
    </ul>
     </div>
@@ -211,7 +214,7 @@ $(document).ready(function(){
 <div class="wrapper row1">
   <header id="header" class="hoc clear">
     <div id="logo" class="fl_left">
-      <h1><a href="index.php">WIENIEC</a></h1>
+      <h1><a href="./">WIENIEC</a></h1>
       <p>Koło Łowieckie w Toruniu</p>
     </div>
 

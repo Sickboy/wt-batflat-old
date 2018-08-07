@@ -10,6 +10,7 @@ $(function() {
 	//	'start'   : "2018-07-21",
 	//	'end'   : "2018-07-28"}],
    lang: 'pl',
+   
    events: <?php echo json_encode($data); ?>,
    eventRender: function(event, element, view) {
     if (event.allDay === 'true') {
@@ -22,5 +23,5 @@ $(function() {
 
 });
 </script>
-			<div id='calendar'></div>
+<div id='calendar'></div>
 

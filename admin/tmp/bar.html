@@ -1,7 +1,7 @@
 <section id="devbar">
     <ul class="navbar clearfix">
         <li class="logo" data-toggle="tooltip" title="Batflat 1.3.5">
-            <img src="http://77.55.211.142/themes/admin/img/logo.svg?t=8600f89a77a0" alt="logo">
+            <img src="http://77.55.211.142/themes/admin/img/logo.svg?t=72a45c74f8ec" alt="logo">
         </li>
         <li data-toggle="tooltip" title="Status code">
             <a href="#info" data-toggle="tab">
@@ -9,16 +9,16 @@
         </li>
         <li data-toggle="tooltip" title="Execution time">
             <span>
-                <i class="fa fa-clock-o"></i> 12.37ms
+                <i class="fa fa-clock-o"></i> 7.22ms
             </span>
         </li>
         <li data-toggle="tooltip" title="Memory usage">
             <span>
-                <i class="fa fa-server"></i> 0.68MB
+                <i class="fa fa-server"></i> 0.65MB
             </span>
         </li>
         <li data-toggle="tooltip" title="Database queries">
-            <a href="#database" data-toggle="tab"><i class="fa fa-database"></i> 8</a>
+            <a href="#database" data-toggle="tab"><i class="fa fa-database"></i> 4</a>
         </li>
         <li data-toggle="tooltip" title="Requests">
             <a href="#requests" data-toggle="tab"><i class="fa fa-rocket"></i> 1</a>
@@ -34,11 +34,11 @@
         <div id="info" class="tab-pane active">
             <ul>
                 <li>HTTP status: 200 OK</li>
-                <li>Route: /blog/edit/3</li>
+                <li>Route: /sql/index</li>
                 <li>Batflat version: 1.3.5</li>
                 <li>PHP version: 7.0.30-0ubuntu0.16.04.1</li>
                 <li>SQLite version: 3.11.0</li>
-                <li>Batflat modules: dashboard, blog, pages, galleries, video, calendar, navigation, snippets, modules, settings, users, contact, devbar</li>
+                <li>Batflat modules: dashboard, blog, pages, galleries, video, calendar, navigation, snippets, sql, modules, settings, users, devbar, contact</li>
                 <li>PHP extensions: Core, date, libxml, openssl, pcre, zlib, filter, hash, Reflection, SPL, session, standard, apache2handler, mysqlnd, PDO, xml, calendar, ctype, curl, dom, mbstring, fileinfo, ftp, gd, gettext, iconv, intl, json, exif, mcrypt, mysqli, pdo_mysql, pdo_sqlite, Phar, posix, propro, raphf, readline, shmop, SimpleXML, sockets, sqlite3, sysvmsg, sysvsem, sysvshm, tokenizer, wddx, xmlreader, xmlwriter, xsl, zip, http, Zend OPcache</li>
             </ul>
         </div>
@@ -46,10 +46,6 @@
             <ul>
                                 <li>SELECT * FROM settings</li>
                                 <li>SELECT * FROM modules ORDER BY sequence ASC</li>
-                                <li>SELECT * FROM users WHERE id = ?</li>
-                                <li>SELECT * FROM blog WHERE id = ?</li>
-                                <li>SELECT blog_tags.name FROM blog_tags LEFT JOIN blog_tags_relationship ON blog_tags.id = blog_tags_relationship.tag_id WHERE blog_tags_relationship.blog_id = ?</li>
-                                <li>SELECT * FROM users</li>
                                 <li>SELECT * FROM users WHERE id = ?</li>
                                 <li>SELECT * FROM users WHERE id = ?</li>
                             </ul>
@@ -61,7 +57,7 @@
                         <dt>$_GET</dt>
                         <dd><pre class="truncate active">Array
 (
-    [t] => 8600f89a77a0
+    [t] => 72a45c74f8ec
 )
 </pre></dd>
                     </dl>
@@ -94,12 +90,11 @@
     [REDIRECT_STATUS] => 200
     [HTTP_HOST] => 77.55.211.142
     [HTTP_CONNECTION] => keep-alive
-    [HTTP_CACHE_CONTROL] => max-age=0
     [HTTP_UPGRADE_INSECURE_REQUESTS] => 1
     [HTTP_USER_AGENT] => Mozilla/5.0 (X11; Fedora; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/66.0.3359.139 Safari/537.36
     [HTTP_ACCEPT] => text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8
     [HTTP_DNT] => 1
-    [HTTP_REFERER] => http://77.55.211.142/admin/blog/edit/3?t=8600f89a77a0
+    [HTTP_REFERER] => http://77.55.211.142/admin/sql/execute?t=72a45c74f8ec
     [HTTP_ACCEPT_ENCODING] => gzip, deflate
     [HTTP_ACCEPT_LANGUAGE] => pl-PL,pl;q=0.9,en-US;q=0.8,en;q=0.7
     [HTTP_COOKIE] => bat=2fnah75u714ij97liacim8goq7; PHPSESSID=mivsq48kbfu3soa4ooj1stka73
@@ -117,20 +112,20 @@
     [CONTEXT_DOCUMENT_ROOT] => /var/www/batflat
     [SERVER_ADMIN] => [no address given]
     [SCRIPT_FILENAME] => /var/www/batflat/admin/index.php
-    [REMOTE_PORT] => 60559
-    [REDIRECT_URL] => /admin/blog/edit/3
-    [REDIRECT_QUERY_STRING] => t=8600f89a77a0
+    [REMOTE_PORT] => 44755
+    [REDIRECT_URL] => /admin/sql/index
+    [REDIRECT_QUERY_STRING] => t=72a45c74f8ec
     [GATEWAY_INTERFACE] => CGI/1.1
     [SERVER_PROTOCOL] => HTTP/1.1
     [REQUEST_METHOD] => GET
-    [QUERY_STRING] => t=8600f89a77a0
-    [REQUEST_URI] => /admin/blog/edit/3?t=8600f89a77a0
+    [QUERY_STRING] => t=72a45c74f8ec
+    [REQUEST_URI] => /admin/sql/index?t=72a45c74f8ec
     [SCRIPT_NAME] => /admin/index.php
     [PHP_SELF] => /admin/index.php
-    [REQUEST_TIME_FLOAT] => 1530795480.403
-    [REQUEST_TIME] => 1530795480
+    [REQUEST_TIME_FLOAT] => 1531230393.492
+    [REQUEST_TIME] => 1531230393
     [HTTP_X_FORWARDED_PORT] => 
-    [PATH_INFO] => /admin/blog/edit/3
+    [PATH_INFO] => /admin/sql/index
 )
 </pre></dd>
                     </dl>

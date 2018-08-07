@@ -1,51 +1,230 @@
 {template: inc/header.html}
+<style>
+	.myImage{
+    max-width: 320px;
+    height: auto;
+    left: 0px;
+    right: 0px;
+	margin-left: 30px;
+	margin-bottom: 15px;}
 
+div.panel:first-child {
+    margin-top:20px;
+}
+
+div.treeview {
+    min-width: 100px;
+    min-height: 100px;
+    
+    max-height: 256px;
+    overflow:auto;
+	
+	padding: 4px;
+	
+	margin-bottom: 20px;
+	
+	color: #369;
+	
+	border: solid 1px;
+	border-radius: 4px;
+}
+div.treeview ul:first-child:before {
+    display: none;
+}
+.treeview, .treeview ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.treeview ul {
+    margin-left:1em;
+    position:relative
+}
+.treeview ul ul {
+    margin-left:.5em
+}
+.treeview ul:before {
+    content:"";
+    display:block;
+    width:0;
+    position:absolute;
+    top:0;
+    left:0;
+    border-left:1px solid;
+    
+    /* creates a more theme-ready standard for the bootstrap themes */
+    bottom:15px;
+}
+.treeview li {
+    margin:0;
+    padding:0 1em;
+    line-height:2em;
+    font-weight:700;
+    position:relative
+}
+.treeview ul li:before {
+    content:"";
+    display:block;
+    width:10px;
+    height:0;
+    border-top:1px solid;
+    margin-top:-1px;
+    position:absolute;
+    top:1em;
+    left:0
+}
+.tree-indicator {
+    margin-right:5px;
+    
+    cursor:pointer;
+}
+.treeview li a {
+    text-decoration: none;
+    color:inherit;
+    
+    cursor:pointer;
+}
+.treeview li button, .treeview li button:active, .treeview li button:focus {
+    text-decoration: none;
+    color:inherit;
+    border:none;
+    background:transparent;
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    outline: 0;
+}
+</style>
+<script>
+$.fn.extend({
+	treeview:	function() {
+		return this.each(function() {
+			// Initialize the top levels;
+			var tree = $(this);
+			
+			tree.addClass('treeview-tree');
+			tree.find('li').each(function() {
+				var stick = $(this);
+			});
+			tree.find('li').has("ul").each(function () {
+				var branch = $(this); //li with children ul
+				
+				branch.prepend("<i class='tree-indicator glyphicon glyphicon-chevron-right'></i>");
+				branch.addClass('tree-branch');
+				branch.on('click', function (e) {
+					if (this == e.target) {
+						var icon = $(this).children('i:first');
+						
+						icon.toggleClass("glyphicon-chevron-down glyphicon-chevron-right");
+						$(this).children().children().toggle();
+					}
+				})
+				branch.children().children().toggle();
+				
+				/**
+				 *	The following snippet of code enables the treeview to
+				 *	function when a button, indicator or anchor is clicked.
+				 *
+				 *	It also prevents the default function of an anchor and
+				 *	a button from firing.
+				 */
+				branch.children('.tree-indicator, button, a').click(function(e) {
+					branch.click();
+					
+					e.preventDefault();
+				});
+			});
+		});
+	}
+});
+
+/**
+ *	The following snippet of code automatically converst
+ *	any '.treeview' DOM elements into a treeview component.
+ */
+$(window).on('load', function () {
+	$('.treeview').each(function () {
+		var tree = $(this);
+		tree.treeview();
+	})
+})
+</script>
+
+{if: $value.logon_only == 1}
+{if: $this->core->getUserInfo('username') != NULL}
 <div class="wrapper row3">
   <main class="hoc container clear">
             <div class="three_quarter first">
                 <div class="post-heading">
-                    <h1>{$post.title}</h1>
+                    <h1><i class="{$post.icon}"></i> {$post.title}</h1>
                 </div>
            
                 {if: $bat.notify}
                 <div id="notify" class="alert alert-{$bat.notify.type}">{$bat.notify.text}</div>
                 {/if}
                 {$post.content}
-                <span class="post-meta">{?= sprintf($lang.blog.posted, $post.author.name, $post.published_at) ?}</span>
+                <span class="post-meta"><small><i>{?= sprintf($lang.blog.posted, $post.author.name, $post.published_at) ?}</i></small></span>
              <br><br>   <p><i class="fa fa-tags"></i> {loop: $post.tags}{if: $key != 0}, {/if}<a href="{$value.url}">{$value.name}</a>{/loop}</p>
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 <hr />
                 <div id="disqus_thread"></div>
                 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
         </div></div>
+{elseif: $this->core->getUserInfo('username') == NULL}
+{/if}
+{elseif: $value.logon_only == 0}
+<div class="wrapper row3">
+  <main class="hoc container clear">
+            <div class="three_quarter first">
+                <div class="post-heading">
+                    <h1><i class="{$post.icon}"></i> {$post.title}</h1>
+                </div>
+
+                {if: $bat.notify}
+                <div id="notify" class="alert alert-{$bat.notify.type}">{$bat.notify.text}</div>
+                {/if}
+                {$post.content}
+                <span class="post-meta"><small><i>{?= sprintf($lang.blog.posted, $post.author.name, $post.published_at) ?}</i></small></span>
+             <br><br>   <p><i class="fa fa-tags"></i> {loop: $post.tags}{if: $key != 0}, {/if}<a href="{$value.url}">{$value.name}</a>{/loop}</p>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <hr />
+                <div id="disqus_thread"></div>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </div></div>
+{/if}
 <div class="sidebar one_quarter">
-<nav class='sdb_holder'><ul>
+
 {?  $lm = '' ?}
 {? $miesiac = array( '01' => 'Styczeń', '02' => 'Luty', '03' => 'Marzec', '04' => 'Kwiecień', '05' => 'Maj', '06' => 'Czerwiec', '07' => 'Lipiec', '08' => 'Sierpień', '09' => 'Wrzesień', '10' => 'Październik', '11' => 'Listopad', '12' => 'Grudzień' ) ?}
+
 {loop: $post.aaa}
 {if: $lm == date('m', $value.published_at)}
 	{if: $value.logon_only == 1}
-        {if: $this->core->getUserInfo('username') != NULL}
-	<li>
-	<a href='/blog/post/{$value.slug}'>{$value.title}</a>
-	</li>
-	{? $lm = date('m', $value.published_at) ?}
-    	{/if}
+       		{if: $this->core->getUserInfo('username') != NULL}
+			<li>
+			<a href='/blog/post/{$value.slug}'>{$value.title}</a>
+			</li>
+			{? $lm = date('m', $value.published_at) ?}
+    		{/if}
         {elseif: $value.logon_only == 0}
-	<li>
-	<a href='/blog/post/{$value.slug}'>{$value.title}</a>
-	</li>
-	{? $lm = date('m', $value.published_at) ?}
+		<li>
+		<a href='/blog/post/{$value.slug}'>{$value.title}</a>
+		</li>
+		{? $lm = date('m', $value.published_at) ?}
 	{/if}
 {else}
-<li><i class="fa fa-caret-right"></i> {?= sprintf($miesiac[date('m', $value.published_at)]) ?}  {?= sprintf(date('Y', $value.published_at)) ?}</li>
-<li><a href='/blog/post/{$value.slug}'>{$value.title}</a>
-</li>
-{? $lm = date('m', $value.published_at) ?}
+	</ul></li></ul>
+	<ul class="treeview">
+	<li><a href="#">{?= sprintf($miesiac[date('m', $value.published_at)]) ?}  {?= sprintf(date('Y', $value.published_at)) ?}</a>
+	<ul>
+	<li><a href='/blog/post/{$value.slug}'>{$value.title}</a>
+	</li>
+	{? $lm = date('m', $value.published_at) ?}
 {/if}
 {/loop}
-</ul></nav>
+
+
 </div>	
 </main>
 </div>
+
 {template: inc/footer.html}
