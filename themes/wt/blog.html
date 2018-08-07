@@ -81,7 +81,8 @@ div.treeview ul:first-child:before {
 .treeview li a {
     text-decoration: none;
     color:inherit;
-    
+    font-size: normal;
+    font-weight: normal;
     cursor:pointer;
 }
 .treeview li button, .treeview li button:active, .treeview li button:focus {
@@ -146,7 +147,11 @@ $(window).on('load', function () {
 		var tree = $(this);
 		tree.treeview();
 	})
+	$(document).ready(function(e){
+		$("#qqq").click();
+	});	
 })
+
 </script>
 <div class="wrapper row3">
   <main class="hoc container clear">
@@ -198,6 +203,7 @@ $(window).on('load', function () {
 <div class="sidebar one_quarter">
 
 {?  $lm = '' ?}
+{? $iid = 'qqq' ?}
 {? $miesiac = array( '01' => 'Styczeń', '02' => 'Luty', '03' => 'Marzec', '04' => 'Kwiecień', '05' => 'Maj', '06' => 'Czerwiec', '07' => 'Lipiec', '08' => 'Sierpień', '09' => 'Wrzesień', '10' => 'Październik', '11' => 'Listopad', '12' => 'Grudzień' ) ?}
 {loop: $blog.aaa}
 {if: $lm == date('m', $value.published_at)}
@@ -217,15 +223,15 @@ $(window).on('load', function () {
 {else}
 	</ul></li></ul>
 	<ul class="treeview">
-	<li><a href="#">{?= sprintf($miesiac[date('m', $value.published_at)]) ?}  {?= sprintf(date('Y', $value.published_at)) ?}</a>
+	<li><a href="#" id="{$iid}" >{?= sprintf($miesiac[date('m', $value.published_at)]) ?}  {?= sprintf(date('Y', $value.published_at)) ?}</a>
 	<ul>
 	<li><a href='/blog/post/{$value.slug}'>{$value.title}</a>
 	</li>
 	{? $lm = date('m', $value.published_at) ?}
+	{? $iid = '' ?}
 {/if}
 {/loop}
 </div>
 </main>
 </div>
-
 {template: inc/footer.html}
