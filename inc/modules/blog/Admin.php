@@ -449,6 +449,7 @@ class Admin extends AdminModule
         // WYSIWYG
         $this->core->addCSS(url('inc/jscripts/wysiwyg/summernote.min.css'));
         $this->core->addJS(url('inc/jscripts/wysiwyg/summernote.min.js'));
+	$this->core->addJS(url('inc/jscripts/wysiwyg/plugins/uploadcare.js'));
 
         if ($this->settings('settings.lang_admin') != 'en_english') {
             $this->core->addJS(url('inc/jscripts/wysiwyg/lang/'.$this->settings('settings.lang_admin').'.js'));

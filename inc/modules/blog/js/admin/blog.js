@@ -14,6 +14,7 @@ function insertEditor(type)
         {
             lang: '{$lang.name}',
             height: 335,
+
             callbacks:
             {
                 onInit: function()
