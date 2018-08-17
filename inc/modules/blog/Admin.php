@@ -145,7 +145,8 @@ class Admin extends AdminModule
                 'intro' => '',
                 'lang' => $this->settings('settings.lang_site'),
                 'user_id' => $this->core->getUserInfo('id'),
-                'comments' => 1,
+                'comments' => 0,
+		'icon' => 'fas fa-align-justify',
                 'cover_photo' => null,
                 'status' => 0,
                 'markdown' => 0,
@@ -449,7 +450,10 @@ class Admin extends AdminModule
         // WYSIWYG
         $this->core->addCSS(url('inc/jscripts/wysiwyg/summernote.min.css'));
         $this->core->addJS(url('inc/jscripts/wysiwyg/summernote.min.js'));
-	$this->core->addJS(url('inc/jscripts/wysiwyg/plugins/uploadcare.js'));
+//	$this->core->addJS(url('inc/jscripts/wysiwyg/plugins/hello/summernote-ext-hello.js'));
+	$this->core->addJS(url('inc/jscripts/wysiwyg/plugins/specialchars/summernote-ext-specialchars.js'));
+	$this->core->addJS(url('inc/jscripts/wysiwyg/plugins/uploadfile/uploadfile.js'));
+//	$this->core->addJS(url('inc/jscripts/tinymce/tinymce.min.js'));
 
         if ($this->settings('settings.lang_admin') != 'en_english') {
             $this->core->addJS(url('inc/jscripts/wysiwyg/lang/'.$this->settings('settings.lang_admin').'.js'));

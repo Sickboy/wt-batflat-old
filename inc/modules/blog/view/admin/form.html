@@ -3,6 +3,19 @@ $(function () {
 	 $('.icp-auto').iconpicker();
 
 });
+/* tinymce.init({
+    selector: '#content',
+    language: 'pl',
+    plugins: [
+         "advlist autolink link image lists charmap print preview hr anchor pagebreak",
+         "searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking",
+         "table contextmenu directionality emoticons paste textcolor filemanager code"
+    ],
+    browser_spellcheck: true,
+    toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect",
+    toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  | print preview code ",
+   image_advtab: true ,
+  }); */\
 </script>
 <article class="row">
 	<form name="page" action="{?=url(ADMIN.'/blog/save/'.isset_or($blog.form.id, null))?}" method="POST" enctype="multipart/form-data">
@@ -26,7 +39,7 @@ $(function () {
                     <div class="form-group no-margin">
                         <div class="tab-content">
                             <div role="tabpanel" class="tab-pane active" id="full-text">
-                                <textarea name="content" rows="16" class="editor form-control" data-editor="{$blog.editor}">{$blog.form.content}</textarea>
+                                <textarea name="content" id="content" rows="16" class="editor form-control" data-editor="{$blog.editor}">{$blog.form.content}</textarea>
                             </div>
                             <div role="tabpanel" class="tab-pane" id="short-text">
                                 <textarea name="intro" rows="16" class="editor form-control" data-editor="{$blog.editor}">{$blog.form.intro}</textarea>

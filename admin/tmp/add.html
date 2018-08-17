@@ -1,0 +1,53 @@
+  <script>
+  $( function() {
+    $( "#datepickerOd" ).datepicker({
+  dateFormat: 'yy-mm-dd'
+	});
+    $( "#datepickerDo" ).datepicker({
+  dateFormat: 'yy-mm-dd'
+        });
+
+$("#colorpicker").spectrum({
+    preferredFormat: "name",
+    showPaletteOnly: true,
+    showPalette:true,
+    hideAfterPaletteSelect:true,
+    color: 'lightgreen',
+    palette: [
+        ['lightgreen', 'black', 'white', 'red', 'yellow', 'green', 'blue', 'magenta', 'grey']
+    ]
+});
+
+  } );
+
+  </script>
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="panel panel-default">
+                  <div class="panel-heading">
+                        <h3 class="panel-title">Dodawanie wydarzenia</h3>
+                  </div>
+                  <div class="panel-body">
+			<form action="http://77.55.211.142/admin/calendar/safe?t=53b127c82e4b" method="POST">
+				<div class="col-xs-12 form-group">
+                        <label>Tytuł</label>
+                        <input type="text" class="form-control" name="tytul" >
+                                </div>
+				<div class="col-xs-6 form-group">
+                        <label>Od kiedy</label>
+			<input type="text" class="form-control" name="od"  id="datepickerOd">
+				</div>
+				<div class="col-xs-6 form-group">
+                        <label>Do kiedy</label>
+                        <input type="text" class="form-control" name="do"  id="datepickerDo">
+                                </div>
+			<div class="col-xs-12"><label>Kolor: </label> 
+			<input id="colorpicker" name="kolor" class="form-control" \></div>
+			<div class="col-xs-12"><br><input type="submit" class="btn btn-primary" value="Zapisz" /></div>
+        	        </form>
+			
+                  </div>
+            </div>
+              
+        </div>
+    </div>

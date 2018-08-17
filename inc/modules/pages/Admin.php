@@ -83,7 +83,7 @@ class Admin extends AdminModule
         
         $this->assign['title'] = $this->lang('new_page');
         $this->assign['langs'] = $this->_getLanguages($this->settings('settings.lang_site'), 'selected');
-        $this->assign['templates'] = $this->_getTemplates(isset_or($e['template'], 'index.html'));
+        $this->assign['templates'] = $this->_getTemplates(isset_or($e['template'], 'strona.html'));
         $this->assign['manageURL'] = url([ADMIN, 'pages', 'manage']);
 
         return $this->draw('form.html', ['pages' => $this->assign]);
@@ -262,6 +262,8 @@ class Admin extends AdminModule
         // WYSIWYG
         $this->core->addCSS(url('inc/jscripts/wysiwyg/summernote.min.css'));
         $this->core->addJS(url('inc/jscripts/wysiwyg/summernote.min.js'));
+	$this->core->addJS(url('inc/jscripts/wysiwyg/plugins/specialchars/summernote-ext-specialchars.js'));
+        $this->core->addJS(url('inc/jscripts/wysiwyg/plugins/uploadfile/uploadfile.js'));
         if ($this->settings('settings', 'lang_admin') != 'en_english') {
             $this->core->addJS(url('inc/jscripts/wysiwyg/lang/'.$this->settings('settings', 'lang_admin').'.js'));
         }

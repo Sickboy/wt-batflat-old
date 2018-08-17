@@ -13,6 +13,17 @@ function insertEditor(type)
         {
             lang: '{$lang.name}',
             height: 335,
+	    toolbar: [
+                 // [groupName, [list of button]]
+		['tip', ['undo', 'redo']],
+                ['fontsize', ['fontname','fontsize']],
+                ['style', ['bold', 'italic', 'underline', 'clear']],
+                ['font', [ 'superscript', 'subscript']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['insert', ['picture',,'fileupload', 'link', 'video', 'table', 'hr']],
+                ['schar', ['specialchars','codeview']],
+            ],
+
             callbacks:
             {
                 onInit: function()

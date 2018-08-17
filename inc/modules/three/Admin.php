@@ -9,7 +9,7 @@ class Admin extends AdminModule
     public function navigation()
     {
         return [
-            $this->lang('index') => 'index',
+//            $this->lang('index') => 'index',
         ];
     }
 
