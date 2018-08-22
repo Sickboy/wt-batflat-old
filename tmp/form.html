@@ -1,0 +1,36 @@
+<form name="email" method="POST" action="/kontakt">
+    <div class="form-group two_quarter first">
+        <label for="inputName">Imię i nazwisko</label>
+        <input type="text" class="form-control" id="inputName" name="name" placeholder="Imię i nazwisko" required />
+    </div>
+    <div class="form-group two_quarter">
+        <label for="inputMail">Adres e-mail</label>
+        <input type="email" class="form-control" id="inputMail" name="from" placeholder="Adres e-mail" required />
+    </div>
+    <div class="form-group">
+        <input type="hidden" class="form-control" id="inputSubject" name="subject" placeholder="Temat" />
+    </div>
+    <div class="form-group">
+        <label for="inputMessage">Wiadomość</label>
+        <textarea rows="5" id="inputMessage" class="form-control" name="message" placeholder="Wiadomość" required></textarea>
+    </div>
+        <div class="checkbox">
+        <label>
+            <input type="checkbox" name="agreement" required> <small>Potwierdzam wysłanie wiadomości</small>
+        </label>
+    </div>
+    
+    <!-- antispam field -->
+    <div class="form-group" id="antispam">
+        <input type="text" name="title" autofill="off" required />
+    </div>
+    <script>
+        (function () {
+            var e = document.getElementById('antispam');
+            e.parentNode.removeChild(e);
+        })();
+    </script>
+    <!-- /antispam field -->
+
+    <button type="submit" name="send-email" class="btn btn-default">Wyślij</button>
+</form>

@@ -221,14 +221,27 @@ $(window).on('load', function () {
 		{? $lm = date('m', $value.published_at) ?}
 	{/if}
 {else}
-	</ul></li></ul>
-	<ul class="treeview">
-	<li><a href="#" id="{$iid}" >{?= sprintf($miesiac[date('m', $value.published_at)]) ?}  {?= sprintf(date('Y', $value.published_at)) ?}</a>
-	<ul>
-	<li><a href='/blog/post/{$value.slug}'>{$value.title}</a>
-	</li>
-	{? $lm = date('m', $value.published_at) ?}
-	{? $iid = '' ?}
+	{if: $value.logon_only == 1}
+                {if: $this->core->getUserInfo('username') != NULL}
+			</ul></li></ul>
+			<ul class="treeview">
+			<li><a href="#" id="{$iid}" >{?= sprintf($miesiac[date('m', $value.published_at)]) ?}  {?= sprintf(date('Y', $value.published_at)) ?}</a>
+			<ul>
+			<li><a href='/blog/post/{$value.slug}'>{$value.title}</a>
+			</li>
+			{? $lm = date('m', $value.published_at) ?}
+			{? $iid = '' ?}
+		{/if}
+        {elseif: $value.logon_only == 0}
+		</ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="{$iid}" >{?= sprintf($miesiac[date('m', $value.published_at)]) ?}  {?= sprintf(date('Y', $value.published_at)) ?}</a>
+                        <ul>
+                        <li><a href='/blog/post/{$value.slug}'>{$value.title}</a>
+                        </li>
+                       {? $lm = date('m', $value.published_at) ?}
+                {? $iid = '' ?}
+	{/if}
 {/if}
 {/loop}
 </div>

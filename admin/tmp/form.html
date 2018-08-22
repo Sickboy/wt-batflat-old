@@ -1,0 +1,138 @@
+<script>
+$(function () {
+	 $('.icp-auto').iconpicker();
+
+});
+/* tinymce.init({
+    selector: '#content',
+    language: 'pl',
+    plugins: [
+         "advlist autolink link image lists charmap print preview hr anchor pagebreak",
+         "searchreplace wordcount visualblocks visualchars insertdatetime media nonbreaking",
+         "table contextmenu directionality emoticons paste textcolor filemanager code"
+    ],
+    browser_spellcheck: true,
+    toolbar1: "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | styleselect",
+    toolbar2: "| responsivefilemanager | link unlink anchor | image media | forecolor backcolor  | print preview code ",
+   image_advtab: true ,
+  }); */
+</script>
+<article class="row">
+	<form name="page" action="http://77.55.211.142/admin/blog/save/165?t=d55866652d6b" method="POST" enctype="multipart/form-data">
+		<div class="col-md-8">
+		    <div class="panel panel-default">
+                <div class="panel-heading">
+		            <h3 class="panel-title">Edycja wpisu</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="form-group">
+                        <label>Tytuł</label>
+                        <input type="text" name="title" class="form-control" value="asdsafkm ksamdkasmdska" required />
+                    </div>
+
+					<div class="progress-wrapper">
+						<div class="progress no-margin collapse">
+							<div class="progress-bar progress-bar-striped active" role="progressbar">
+							</div>
+						</div>
+					</div>
+                    <div class="form-group no-margin">
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="full-text">
+                                <textarea name="content" id="content" rows="16" class="editor form-control" data-editor="wysiwyg">&lt;p&gt;aksmdm skasmd ksadm kadsm&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;&lt;img style=&quot;width: 675px;&quot; src=&quot;http://77.55.211.142/uploads/blog/1534850892.png&quot;&gt;&lt;/p&gt;&lt;p&gt;asdsad&lt;/p&gt;&lt;p&gt;&lt;a href=&quot;http://77.55.211.142/uploads/file/php&quot;&gt;php&lt;/a&gt;&lt;br&gt;&lt;/p&gt;</textarea>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="short-text">
+                                <textarea name="intro" rows="16" class="editor form-control" data-editor="wysiwyg"></textarea>
+                            </div>
+                        </div>
+                        <ul class="nav nav-tabs" role="tablist" id="textarea-tabs">
+                            <li class="active"><a href="#full-text" role="tab" data-toggle="tab">Treść</a></li>
+                            <li><a href="#short-text" role="tab" data-toggle="tab">Wprowadzenie</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+	    </div>
+
+	    <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Ustawienia</h3>
+                </div>
+                <div class="panel-body">
+        	    	<div class="form-group">
+                        <label>Obraz</label>
+                                                <div style="position:relative;">
+                    		<img src="http://77.55.211.142/uploads/blog/asdsafkm-ksamdkasmdska.png?1534851403" class="img-responsive" />
+                    		<input type="file" name="cover_photo" class="form-control" />
+                    		<a href="http://77.55.211.142/admin/blog/deleteCover/165?t=d55866652d6b" class="btn btn-danger" style="position:absolute; right:5px; top:5px;">Usuń cover</a>
+                    	</div>
+                                            </div>
+		    <div class="form-group">
+                        <label>Ikona</label>
+				<input class="form-control icp icp-auto" value="fas fa-calendar" type="text" name="icon"/>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Alias</label>
+                        <input type="text" name="slug" class="form-control" value="asdsafkm-ksamdkasmdska"/>
+                    </div>
+
+                    <div class="form-group">
+		                <label>Język</label>
+		                <select name="lang" class="form-control">
+		                			                    <option selected>pl_polski</option>
+		                    		                </select>
+		            </div>
+
+                    <div class="form-group">
+                        <label>Status</label>
+                        <select name="status" class="form-control">
+                        	<option value="0">Szkic</option>
+                        	<option value="1">Nieopublikowany</option>
+                        	<option value="2" selected>Opublikowany</option>
+                    	</select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Tagi</label>
+                        <select name="tags[]" class="form-control" multiple>
+                                                </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Autor</label>
+                        <select name="user_id" class="form-control">
+                        	                        	<option value="1" selected>
+                                                                Łukasz Pawłowski (admin)
+                                                            </option>
+                        	                        	<option value="4">
+                                                                wieniec (wieniec)
+                                                            </option>
+                        	                    	</select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Rozpocznij publikację</label>
+                        <input type="datetime-local" class="form-control" name="published_at" value="2018-08-21T13:27" />
+                    </div>
+
+                    <div class="form-group">
+                        <label><input type="checkbox" name="comments" value="1"  /> Wyświetl komentarze Disqus</label>
+                    </div>
+
+		     <div class="form-group">
+                        <label><input type="checkbox" name="logon_only" value="1" checked /> Tylko dla zalogowanych</label>
+                    </div>
+
+                    <div class="form-group">
+                        <label><input type="checkbox" name="markdown" value="1"  /> Włącz Markdown</label>
+                    </div>
+
+                    <input type="submit" name="save" value="Zapisz" class="btn btn-primary" />
+                    <a href="http://77.55.211.142/admin/blog/manage?t=d55866652d6b" class="btn btn-default">Anuluj</a>
+                </div>
+            </div>
+        </div>
+	</form>
+</article>

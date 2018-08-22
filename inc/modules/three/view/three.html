@@ -12,6 +12,7 @@
 {if: date("M", $value.published_at) == 'Oct'}{? $value.published_at_m='Paz' ?}{/if}
 {if: date("M", $value.published_at) == 'Nov'}{? $value.published_at_m='Lis' ?}{/if}
 {if: date("M", $value.published_at) == 'Dec'}{? $value.published_at_m='Gru' ?}{/if}
+
 <li class="one_third {if: $i == 0} first {? $i = 1 ?} {/if}">
         <article class="element">
                 {if: $value.cover_photo != NULL}<figure><center><img src="http://77.55.211.142/uploads/blog/{$value.cover_photo}"  width="100%" height="100%" alt=""></center>

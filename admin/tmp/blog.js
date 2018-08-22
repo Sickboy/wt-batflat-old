@@ -115,7 +115,7 @@ function sendFile(file, editor)
 
                 return xhr;
             },
-            url: 'http://77.55.211.142/admin/blog/editorUpload?t=53b127c82e4b',
+            url: 'http://77.55.211.142/admin/blog/editorUpload?t=d55866652d6b',
             data: formData,
             type: 'POST',
             cache: false,
@@ -180,7 +180,7 @@ $(document).ready(function()
         load: function (search, callback) {
             if (search.length < this.minSearchLength) return callback();
             $.ajax({
-                url: 'http://77.55.211.142/admin/blog/jsontags/' + encodeURIComponent(search) + '?t=53b127c82e4b',
+                url: 'http://77.55.211.142/admin/blog/jsontags/' + encodeURIComponent(search) + '?t=d55866652d6b',
                 type: 'GET',
                 dataType: 'json',
                 success: function(data) {

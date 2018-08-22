@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<!--
+	Główna
+-->
+<html>
+<head>
+<title>Koło Łowieckie "Wieniec" w Toruniu</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="http://77.55.211.142/inc/css/bootstrap.min.css">
+<link href="http://77.55.211.142/themes/wt/css/layout.css" rel="stylesheet" type="text/css" media="all"> 
+<link href="http://77.55.211.142/themes/wt/css/timeline.css" rel="stylesheet" type="text/css" media="all">
+<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+<!--- <link href="http://77.55.211.142/themes/wt/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="http://77.55.211.142/inc/jscripts/bootstrap.min.js"></script>
+    <link href="http://77.55.211.142/inc/jscripts/calendar/fullcalendar.css" rel="stylesheet">
+    <script src="http://77.55.211.142/inc/jscripts/calendar/lib/moment.min.js"></script>
+    <script src="http://77.55.211.142/inc/jscripts/calendar/fullcalendar.js"></script>
+    <script src="http://77.55.211.142/inc/jscripts/calendar/locale/pl.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<style>
+a{color:#FF8F2B;}
+a:active, a:focus{background:transparent;}
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 15px;
+    border: 1px solid transparent;
+}
+.navbar-custom {
+  background-color: #423424;
+  border-color: #423424;
+  text-transform: uppercase;
+  padding-top: 10px;
+}
+.navbar-custom .navbar-text {
+  color: #FFFFFF;
+}
+.navbar-custom .navbar-nav > li > a {
+  color: #ffffff;
+}
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus {
+  color: #FF8F2B;
+  background-color: #423424;
+}
+.navbar-custom .navbar-nav > .active > a,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus {
+  color: #FF8F2B;
+  background-color: #423424;
+}
+.navbar-custom .navbar-nav > .disabled > a,
+.navbar-custom .navbar-nav > .disabled > a:hover,
+.navbar-custom .navbar-nav > .disabled > a:focus {
+  color: #FF8F2B;
+  background-color: #423424;
+}
+.navbar-custom .navbar-toggle {
+  border-color: #FF8F2B;
+}
+.navbar-custom .navbar-toggle:hover,
+.navbar-custom .navbar-toggle:focus {
+  background-color: #FF8F2B;
+}
+.navbar-custom .navbar-toggle .icon-bar {
+  background-color: #FF8F2B;
+}
+.navbar-custom .navbar-collapse,
+.navbar-custom .navbar-form {
+  border-color: #423424;
+}
+.navbar-custom .navbar-nav > .dropdown > a:hover .caret,
+.navbar-custom .navbar-nav > .dropdown > a:focus .caret {
+  border-top-color: #FF8F2B;
+  border-bottom-color: #FF8F2B;
+}
+.navbar-custom .navbar-nav > .open > a,
+.navbar-custom .navbar-nav > .open > a:hover,
+.navbar-custom .navbar-nav > .open > a:focus {
+  background-color: #423424;
+  color: #FF8F2B;
+}
+.navbar-custom .navbar-nav > .open > a .caret,
+.navbar-custom .navbar-nav > .open > a:hover .caret,
+.navbar-custom .navbar-nav > .open > a:focus .caret { 
+  border-top-color: #FF8F2B;
+  border-bottom-color: #FF8F2B;
+}
+.navbar-custom .navbar-nav > .dropdown > a .caret {
+  border-top-color: #FFFFFF;
+  border-bottom-color: #FFFFFF;
+}
+
+@media (max-width: 767) {
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a {
+    color: #ffffff;
+  }
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a:hover,
+  .navbar-custom .navbar-nav .open .dropdown-menu > li > a:focus {
+    color: #FFFFFF;
+    background-color: #FF8F2B;
+  }
+  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar-custom .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #FFFFFF;
+    background-color: #FF8F2B;
+  }
+  .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a,
+  .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+  .navbar-custom .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+    color: #FF8F2B;
+    background-color: transparent;
+  }
+}
+.navbar-custom .navbar-link {
+  color: #FFFFFF;
+}
+.navbar-custom .navbar-link:hover {
+  color: #FFFFFF;
+}
+.dropdown-menu {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0;
+    font-size: 14px;
+    text-align: left;
+    list-style: none;
+    background-color:rgba(0,0,0,.6);
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid #423424;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+.dropdown-menu>li>a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 2.2;
+    color: #ffffff;
+    white-space: nowrap;
+    border-top: 2px solid #615c5c;
+}
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #FF8F2B;
+    outline: 0;
+    line-height: 2.2;
+    border-top: 2px solid #615c5c;
+}
+.dropdown-menu>li>a:focus, .dropdown-menu>li>a:hover {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #ffffff;
+    white-space: nowrap;
+    background-color: #FF8F2B;
+    line-height: 2.2;
+    border-top: 2px solid #615c5c;
+}
+</style>
+<!--- <script>
+$(document).ready(function(){
+    $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideDown("900");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).not('.in .dropdown-menu').stop( true, true ).slideUp("normal");
+            $(this).toggleClass('open');       
+        }
+    );
+});
+</script> -->
+<body id="top">
+<div class="wrapper row0">
+  <div id="topbar" class="hoc clear">
+    <div class="fl_left">
+      <ul class="nospace inline pushright">
+	        <li><a href="/admin/"><i class="fas fa-sign-in-alt"></i> Zaloguj </a> </li>
+   	   
+   </ul>
+    </div>
+    <div class="fl_right">
+      <form class="clear" method="post" action="#">
+        <fieldset>
+          <legend>Szukaj:</legend>
+          <input type="search" value="" placeholder="Szukaj&hellip;">
+          <button class="fa fa-search" type="submit" title="Szukaj"><em>Szukaj</em></button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="wrapper row1">
+  <header id="header" class="hoc clear">
+    <div id="logo" class="fl_left">
+      <h1><a href="./">WIENIEC</a></h1>
+      <p>Koło Łowieckie w Toruniu</p>
+    </div>
+
+<header class="navbar navbar-custom fl_right" >
+  
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+               <li class="">
+        <a href="http://77.55.211.142" >Strona główna</a>
+    </li>
+         
+               <li class="dropdown ">
+        <a href="#" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            O kole            <span class="caret"></span>
+        </a>
+	        <ul class="dropdown-menu">
+            	    	    <li class="active"><a href="http://77.55.211.142/blog">Aktualności</a></li>
+	    	    	    	    <li ><a href="http://77.55.211.142/historia">Historia</a></li>
+	    	    	    	    <li ><a href="http://77.55.211.142/timeline">Timeline</a></li>
+	    	    	    	    <li ><a href="http://77.55.211.142/obwody">Nasze obwody</a></li>
+	    	    	    	    <li ><a href="http://77.55.211.142/czlonkowie">Członkowie</a></li>
+	    	            </ul>
+    </li>
+                <li class="dropdown ">
+        <a href="#" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            Galerie            <span class="caret"></span>
+        </a>
+	        <ul class="dropdown-menu">
+            	    	    <li ><a href="http://77.55.211.142/zdjecia">Zdjęcia</a></li>
+	    	    	    	    <li ><a href="http://77.55.211.142/filmy">Filmy</a></li>
+	    	            </ul>
+    </li>
+                <li class="dropdown ">
+        <a href="#" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            O polowaniu            <span class="caret"></span>
+        </a>
+	        <ul class="dropdown-menu">
+            	    	    <li ><a href="http://77.55.211.142/jak-bezpiecznie-polowac">Jak bezpiecznie polować</a></li>
+	    	    	    	    <li ><a href="http://77.55.211.142/metody-polowan">Metody polowań</a></li>
+	    	    	    	    <li ><a href="http://77.55.211.142/reakcja-zwierzyny-na-strzal">Reakcja zwierzyny</a></li>
+	    	    	    	    <li ><a href="http://77.55.211.142/urzadzenia-lowieckie">Urządzenia łowieckie</a></li>
+	    	    	    	    <li ><a href="http://77.55.211.142/literatura">Literatura</a></li>
+	    	            </ul>
+    </li>
+                   <li class="">
+        <a href="http://77.55.211.142/kalendarz" >Kalendarz</a>
+    </li>
+         
+                  <li class="">
+        <a href="http://77.55.211.142/kontakt" >Kontakt</a>
+    </li>
+         
+         </ul>
+    </nav>
+ 
+</header>
+
+</header>
+
+  </header>
+</div>
+<style>
+	.myImage{
+    max-width: 320px;
+    height: auto;
+    left: 0px;
+    right: 0px;
+	margin-left: 30px;
+	margin-bottom: 15px;}
+
+div.panel:first-child {
+    margin-top:20px;
+}
+
+div.treeview {
+    min-width: 100px;
+    min-height: 100px;
+    
+    max-height: 256px;
+    overflow:auto;
+	
+	padding: 4px;
+	
+	margin-bottom: 20px;
+	
+	color: #369;
+	
+	border: solid 1px;
+	border-radius: 4px;
+}
+div.treeview ul:first-child:before {
+    display: none;
+}
+.treeview, .treeview ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+.treeview ul {
+    margin-left:1em;
+    position:relative
+}
+.treeview ul ul {
+    margin-left:.5em
+}
+.treeview ul:before {
+    content:"";
+    display:block;
+    width:0;
+    position:absolute;
+    top:0;
+    left:0;
+    border-left:1px solid;
+    
+    /* creates a more theme-ready standard for the bootstrap themes */
+    bottom:15px;
+}
+.treeview li {
+    margin:0;
+    padding:0 1em;
+    line-height:2em;
+    font-weight:700;
+    position:relative
+}
+.treeview ul li:before {
+    content:"";
+    display:block;
+    width:10px;
+    height:0;
+    border-top:1px solid;
+    margin-top:-1px;
+    position:absolute;
+    top:1em;
+    left:0
+}
+.tree-indicator {
+    margin-right:5px;
+    
+    cursor:pointer;
+}
+.treeview li a {
+    text-decoration: none;
+    color:inherit;
+    font-size: normal;
+    font-weight: normal;
+    cursor:pointer;
+}
+.treeview li button, .treeview li button:active, .treeview li button:focus {
+    text-decoration: none;
+    color:inherit;
+    border:none;
+    background:transparent;
+    margin:0px 0px 0px 0px;
+    padding:0px 0px 0px 0px;
+    outline: 0;
+}
+
+</style>
+<script>
+$.fn.extend({
+	treeview:	function() {
+		return this.each(function() {
+			// Initialize the top levels;
+			var tree = $(this);
+			
+			tree.addClass('treeview-tree');
+			tree.find('li').each(function() {
+				var stick = $(this);
+			});
+			tree.find('li').has("ul").each(function () {
+				var branch = $(this); //li with children ul
+				
+				branch.prepend("<i class='tree-indicator glyphicon glyphicon-chevron-right'></i>");
+				branch.addClass('tree-branch');
+				branch.on('click', function (e) {
+					if (this == e.target) {
+						var icon = $(this).children('i:first');
+						
+						icon.toggleClass("glyphicon-chevron-down glyphicon-chevron-right");
+						$(this).children().children().toggle();
+					}
+				})
+				branch.children().children().toggle();
+				
+				/**
+				 *	The following snippet of code enables the treeview to
+				 *	function when a button, indicator or anchor is clicked.
+				 *
+				 *	It also prevents the default function of an anchor and
+				 *	a button from firing.
+				 */
+				branch.children('.tree-indicator, button, a').click(function(e) {
+					branch.click();
+					
+					e.preventDefault();
+				});
+			});
+		});
+	}
+});
+
+/**
+ *	The following snippet of code automatically converst
+ *	any '.treeview' DOM elements into a treeview component.
+ */
+$(window).on('load', function () {
+	$('.treeview').each(function () {
+		var tree = $(this);
+		tree.treeview();
+	})
+})
+</script>
+
+<div class="wrapper row3">
+  <main class="hoc container clear">
+            <div class="three_quarter first">
+                <div class="post-heading">
+                    <h1><i class="fas fa-align-justify"></i> Bieżące informacje</h1>
+                </div>
+
+                                <p>Zarząd Okręgowy w Toruniu prosi Koleżanki i Kolegów, którzy nie złożyli karty danych (<a title="dane_mysliwego-aktualizacja" href="../images/dane_mysliwego-aktualizacja.pdf">załącznik</a>) ze zdjęciem do wymiany legitymacji PZŁ proszeni są o dostarczenie w.w dokumentów do biura ZO najpóźniej do dnia 31 sierpnia br. </p>
+<p>W związku z coraz częstszymi przypadkami występowania w środowisku przyrodniczym hybryd wilka z psem obliguje się myśliwych do niezwłocznego powiadamiania zarządu o zaobserwowanych w naszych łowiskach osobnikach mieszanych.<br />Jest to niezbędne w celu podjęcia szybkich działań, polegających na usunięciu ze środowiska takich osobników. <br />Likwidacja hybrydy wilka i psa domowego z populacji dziko występujących wilków jest zgodna z zaleceniami rekomendacji numer 173 (2014) Stałego Komitetu w ramach Konwencji o ochronie gatunków dzikiej flory i fauny europejskiej oraz ich siedlisk, przyjętej w dniu 5 grudnia 2014 roku w sprawie "hybrydyzacji między dzikimi wilkami a psami domowymi".<br />Ww. działania są niezbędne w celu wyeliminowania zagrożenia dla czystości populacji wilka w Polsce. </p>
+<p>W związku z nowelizacją ustawy - Prawo Łowieckie, przypominamy, że od 1 kwietnia 2018 roku na podstawie art. 42aa pkt 15 zabrania się wykonywania polowania w obecności lub przy udziale dzieci do 18 roku życia. Za nieprzestrzeganie cytowanego przepisu ustawy przewidziane są konsekwencje karne w postaci grzywny, kary ograniczenia wolności albo pozbawienia wolności do roku. Jednocześnie wymagamy, aby wszelkiego rodzaju wywiady oraz udział w programach, gdzie poruszane są elementy związane z gospodarką łowiecką, a w szczególności z wykonywaniem polowania były konsultowane z Zarządem Okręgowych bądź z rzecznikiem prasowym Toruńskiej Organizacji Łowieckiej, kol. Michałem Przepierskim. Uczulamy także, aby z rozwagą publikować na portalach internetowych oraz stronach www zdjęć lub filmów przedstawiających sceny z polowań.</p>
+<p>Przypominamy o intensywnym odstrzale dzików, celem zapobiegnięcia przedostania się ASF na zachodnie tereny Polski.</p>
+<p>Informujemy, że w dniach 6 - 10 sierpnia br. strzelnica myśliwska ZO PZŁ w Toruniu będzie nieczynna.</p>
+<p>W dniu 2 września odbędą się zawody pn. "Sąsiedzi na strzelnicy". Proszę o mobilizację Koleżanki i Kolegów młodszych wiekiem o zgrupowanie reprezentacji. Przewidziane wsparcie Zarządu. </p>
+<p>Darz Bór! </p><center><table><tr></tr></table></center>                <span class="post-meta"><small><i>Napisane przez Łukasz Pawłowski w dniu 06 Sierpnia 2018, 00:00</i></small></span>
+             <br><br>   <p><i class="fa fa-tags"></i> </p>
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <hr />
+                <div id="disqus_thread"></div>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+        </div></div>
+<div class="sidebar one_quarter">
+
+
+	                        
+	                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="<br />
+<b>Notice</b>:  Undefined variable: iid in <b>/var/www/batflat/tmp/post.html</b> on line <b>232</b><br />
+" >Sierpień  2018</a>
+                        <ul>
+                        <li><a href='/blog/post/biezace-informacje'>Bieżące informacje</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/zagin-nero'>Zaginął Nero</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Czerwiec  2018</a>
+                        <ul>
+                        <li><a href='/blog/post/nowa-ambona'>Nowa ambona</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/komunikaty'>Komunikaty</a>
+		</li>
+						<li>
+		<a href='/blog/post/rozporzdzenie-o-ochronie-danych-osobowych---rodo'>Rozporządzenie o ochronie danych osobowych - RODO</a>
+		</li>
+						<li>
+		<a href='/blog/post/mistrzostwa-okregu-torunskiego'>Mistrzostwa Okręgu Toruńskiego</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Maj  2018</a>
+                        <ul>
+                        <li><a href='/blog/post/zasady-selekcji-populacyjnej-i-osobniczej'>Zasady selekcji populacyjnej i osobniczej</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/komunikaty'>Komunikaty</a>
+		</li>
+						<li>
+		<a href='/blog/post/kilka-slow-o-walnym-zgromadzeniu-czlonkow-kola'>Kilka słów o Walnym Zgromadzeniu Członków Koła</a>
+		</li>
+						<li>
+		<a href='/blog/post/polowanie-dewizowe-na-rogacze'>Polowanie dewizowe na rogacze</a>
+		</li>
+						<li>
+		<a href='/blog/post/powolanie-lowczych-okregowych'>Powołanie łowczych okręgowych</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Kwiecień  2018</a>
+                        <ul>
+                        <li><a href='/blog/post/program-walnego-zgromadzenia-czlonkow-kola'>Program Walnego Zgromadzenia Członków Koła</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/strzelnica-dla-czlonkow-kola'>Strzelnica dla członków koła</a>
+		</li>
+						<li>
+		<a href='/blog/post/walne-zgromadzenie-czlonkow-kola'>Walne Zgromadzenie Członków Koła</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Marzec  2018</a>
+                        <ul>
+                        <li><a href='/blog/post/swieta-wielkiej-nocy'>Święta Wielkiej Nocy</a>
+                        </li>
+                                               
+	                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Styczeń  2018</a>
+                        <ul>
+                        <li><a href='/blog/post/knieje---targi-myslistwa-i-strzelectwa'>Knieje - Targi Myślistwa i Strzelectwa</a>
+                        </li>
+                                               
+	                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Grudzień  2017</a>
+                        <ul>
+                        <li><a href='/blog/post/swieta-bozego-narodzenia'>Święta Bożego Narodzenia</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/polowanie-wigilijne-'>Polowanie wigilijne </a>
+		</li>
+						<li>
+		<a href='/blog/post/skladka-pzl'>Składka PZŁ</a>
+		</li>
+						<li>
+		<a href='/blog/post/uwaga'>Uwaga!</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Listopad  2017</a>
+                        <ul>
+                        <li><a href='/blog/post/polowanie-dewizowe'>Polowanie dewizowe</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/hubertus-2017'>Hubertus 2017</a>
+		</li>
+						<li>
+		<a href='/blog/post/swieto-sw-huberta'>Święto Św. Huberta</a>
+		</li>
+						<li>
+		<a href='/blog/post/skladka-pzl'>Składka PZŁ</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Październik  2017</a>
+                        <ul>
+                        <li><a href='/blog/post/zniesiono-moratorium-na-losia'>Zniesiono moratorium na łosia</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/sezon-polowan-zbiorowych'>Sezon polowań zbiorowych</a>
+		</li>
+						<li>
+		<a href='/blog/post/prosba'>Prośba</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Wrzesień  2017</a>
+                        <ul>
+                        <li><a href='/blog/post/bal-mysliwski-z-okazji-swieta-sw-huberta'>Bal myśliwski z okazji święta św. Huberta</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/plan-polowan-zbiorowych-na-sezon-2017-2018'>Plan polowań zbiorowych na sezon 2017-2018</a>
+		</li>
+						<li>
+		<a href='/blog/post/redukcja-populacji-dzika-w-naszym-kole'>Redukcja populacji dzika w naszym kole</a>
+		</li>
+						<li>
+		<a href='/blog/post/targi-hubertus-arena-2017'>Targi Hubertus Arena 2017</a>
+		</li>
+						<li>
+		<a href='/blog/post/hubertus-2017'>HUBERTUS 2017</a>
+		</li>
+						<li>
+		<a href='/blog/post/odstrzal-dzika'>Odstrzał dzika</a>
+		</li>
+						<li>
+		<a href='/blog/post/ilu-jest-mysliwych-w-polsce-'>Ilu jest myśliwych w polsce? </a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Sierpień  2017</a>
+                        <ul>
+                        <li><a href='/blog/post/rykowisko'>Rykowisko</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/polowanie-dewizowe'>Polowanie dewizowe</a>
+		</li>
+						<li>
+		<a href='/blog/post/zarzadzanie-ochrona-przyrody-w-lasach---2017'>Zarządzanie ochroną przyrody w lasach - 2017</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Czerwiec  2017</a>
+                        <ul>
+                        <li><a href='/blog/post/pilnowanie-upraw'>Pilnowanie upraw</a>
+                        </li>
+                                               
+	                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Maj  2017</a>
+                        <ul>
+                        <li><a href='/blog/post/pilnowanie-upraw'>Pilnowanie upraw</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/konferencja:-jeszcze-polska-nie-zginela---wies'>Konferencja: Jeszcze Polska nie zginęła - wieś</a>
+		</li>
+						<li>
+		<a href='/blog/post/strzelnica-dla-czlonkow-kola'>Strzelnica dla członków koła</a>
+		</li>
+						<li>
+		<a href='/blog/post/walne-zgromadzenie-czlonkow-kola'>Walne Zgromadzenie Członków Koła</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Kwiecień  2017</a>
+                        <ul>
+                        <li><a href='/blog/post/sadzenie-lasu'>Sadzenie lasu</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/walne-zgromadzenie-czlonkow-kola'>Walne Zgromadzenie Członków Koła</a>
+		</li>
+						<li>
+		<a href='/blog/post/swieta-wielkiej-nocy'>Święta Wielkiej Nocy</a>
+		</li>
+						<li>
+		<a href='/blog/post/sadzenie-lasu'>Sadzenie lasu</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Marzec  2017</a>
+                        <ul>
+                        <li><a href='/blog/post/lesni-mieszkancy'>Leśni mieszkańcy</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/kasa-fiskalna'>Kasa fiskalna</a>
+		</li>
+						<li>
+		<a href='/blog/post/petycja-w-obronie-lowiectwa'>Petycja w obronie łowiectwa</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Luty  2017</a>
+                        <ul>
+                        <li><a href='/blog/post/informacje-finansowe'>Informacje finansowe</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/odstrzal-jeleni'>Odstrzał jeleni</a>
+		</li>
+						<li>
+		<a href='/blog/post/ankieta'>Ankieta</a>
+		</li>
+						<li>
+		<a href='/blog/post/rezygnacja'>Rezygnacja</a>
+		</li>
+						<li>
+		<a href='/blog/post/odstrzal-jeleni'>Odstrzał jeleni</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Styczeń  2017</a>
+                        <ul>
+                        <li><a href='/blog/post/prace-w-lowisku'>Prace w łowisku</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/zima'>Zima</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Grudzień  2016</a>
+                        <ul>
+                        <li><a href='/blog/post/zyczenia-swiateczne'>Życzenia Świąteczne</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/polowanie-wigilijne'>Polowanie Wigilijne</a>
+		</li>
+						<li>
+		<a href='/blog/post/wazne'>Ważne</a>
+		</li>
+						<li>
+		<a href='/blog/post/polowanie-dewizowe'>Polowanie dewizowe</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Listopad  2016</a>
+                        <ul>
+                        <li><a href='/blog/post/inwentaryzacja-dzika-zakonczona'>Inwentaryzacja dzika zakończona</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/wycena-parostkow'>Wycena parostków</a>
+		</li>
+						<li>
+		<a href='/blog/post/polowania-zbiorowe'>Polowania zbiorowe</a>
+		</li>
+						<li>
+		<a href='/blog/post/sprawy-finansowe'>Sprawy finansowe</a>
+		</li>
+						<li>
+		<a href='/blog/post/sezon-polowan-zbiorowych'>Sezon polowań zbiorowych</a>
+		</li>
+						<li>
+		<a href='/blog/post/swieto-swietego-huberta'>Święto Świętego Huberta</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Październik  2016</a>
+                        <ul>
+                        <li><a href='/blog/post/inwentaryzacja-dzika'>Inwentaryzacja dzika</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/plan-polowan-zbiorowych-na-sezon-2016-2017'>Plan polowań zbiorowych na sezon 2016/2017</a>
+		</li>
+						<li>
+		<a href='/blog/post/ogolnopolski-hubertus-wegrowski-2016'>Ogólnopolski Hubertus Węgrowski 2016</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Wrzesień  2016</a>
+                        <ul>
+                        <li><a href='/blog/post/rykowisko'>Rykowisko</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/vii-targi-mysliwskie-w-bydgoszczy'>VII Targi Myśliwskie w Bydgoszczy</a>
+		</li>
+						<li>
+		<a href='/blog/post/v-piknik-mysliwski'>V Piknik Myśliwski</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Sierpień  2016</a>
+                        <ul>
+                        <li><a href='/blog/post/pilne'>Pilne!</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/v-piknik-mysliwski'>V Piknik Myśliwski</a>
+		</li>
+						<li>
+		<a href='/blog/post/polowanie-dewizowe'>Polowanie dewizowe</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Lipiec  2016</a>
+                        <ul>
+                        <li><a href='/blog/post/ostatnie-pozegnanie'>Ostatnie pożegnanie</a>
+                        </li>
+                                               
+	                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Czerwiec  2016</a>
+                        <ul>
+                        <li><a href='/blog/post/pilnowanie-upraw'>Pilnowanie upraw</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/walne-zgromadzenie-czlonkow-kola'>Walne Zgromadzenie Członków Koła</a>
+		</li>
+						<li>
+		<a href='/blog/post/xxi-ogolnopolski-festiwal-muzyki-mysliwskiej'>XXI Ogólnopolski Festiwal Muzyki Myśliwskiej</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Maj  2016</a>
+                        <ul>
+                        <li><a href='/blog/post/„moj-dziadek-tata-mysliwy-2016”'>„Mój dziadek, tata myśliwy 2016”</a>
+                        </li>
+                                               
+	                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Kwiecień  2016</a>
+                        <ul>
+                        <li><a href='/blog/post/walne-zgromadzenie-czlonkow-kola'>Walne Zgromadzenie Członków Koła</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/strzelnica-dla-czlonkow-kola'>Strzelnica dla członków koła</a>
+		</li>
+						<li>
+		<a href='/blog/post/xxi-ogolnopolski-festiwal-muzyki-mysliwskiej'>XXI Ogólnopolski Festiwal Muzyki Myśliwskiej</a>
+		</li>
+						<li>
+		<a href='/blog/post/prace-w-lowisku'>Prace w łowisku</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Marzec  2016</a>
+                        <ul>
+                        <li><a href='/blog/post/swieta-wielkiej-nocy'>Święta Wielkiej Nocy</a>
+                        </li>
+                                               
+	                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Styczeń  2016</a>
+                        <ul>
+                        <li><a href='/blog/post/wymiana-legitymacji-pzl'>Wymiana legitymacji PZŁ</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/plan-lowiecki'>Plan łowiecki</a>
+		</li>
+						<li>
+		<a href='/blog/post/prace-w-lowisku'>Prace w łowisku</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Grudzień  2015</a>
+                        <ul>
+                        <li><a href='/blog/post/szczesliwego-nowego-roku'>Szczęśliwego Nowego Roku!</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/wymiana-legitymacji-pzl'>Wymiana legitymacji PZŁ</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Listopad  2015</a>
+                        <ul>
+                        <li><a href='/blog/post/prace-w-lowisku'>Prace w łowisku</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/skladka-pzl'>Składka PZŁ</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Październik  2015</a>
+                        <ul>
+                        <li><a href='/blog/post/plan-polowan-zbiorowych'>Plan polowań zbiorowych</a>
+                        </li>
+                                               
+	                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Sierpień  2015</a>
+                        <ul>
+                        <li><a href='/blog/post/iv-piknik-mysliwski'>IV Piknik Myśliwski</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/prace-w-lowisku'>Prace w łowisku</a>
+		</li>
+						<li>
+		<a href='/blog/post/v-zawody-strzeleckie-sasiedzi-na-strzelnicy'>V Zawody Strzeleckie "Sąsiedzi na strzelnicy"</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Lipiec  2015</a>
+                        <ul>
+                        <li><a href='/blog/post/ostatnie-pozegnanie'>Ostatnie pożegnanie</a>
+                        </li>
+                                               
+	                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Czerwiec  2015</a>
+                        <ul>
+                        <li><a href='/blog/post/prace-w-lowisku'>Prace w łowisku</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/uwaga'>Uwaga!</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Maj  2015</a>
+                        <ul>
+                        <li><a href='/blog/post/prace-w-lowisku'>Prace w łowisku</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/i-po-walnym-zgromadzeniu-'>I po Walnym Zgromadzeniu... </a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Kwiecień  2015</a>
+                        <ul>
+                        <li><a href='/blog/post/walne-zgromadzenie-czlonkow-kola'>Walne Zgromadzenie Członków Koła</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/strzelnica-dla-czlonkow-kola'>Strzelnica dla członków koła</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Marzec  2015</a>
+                        <ul>
+                        <li><a href='/blog/post/prace-w-lowisku'>Prace w łowisku</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/wiosna'>Wiosna</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Styczeń  2015</a>
+                        <ul>
+                        <li><a href='/blog/post/polowania-zbiorowe'>Polowania zbiorowe</a>
+                        </li>
+                                               
+	                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Grudzień  2014</a>
+                        <ul>
+                        <li><a href='/blog/post/zyczenia-swiateczne'>Życzenia Świąteczne</a>
+                        </li>
+                                               
+	                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Listopad  2014</a>
+                        <ul>
+                        <li><a href='/blog/post/skladka-pzl'>Składka PZŁ</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/swieto-swietego-huberta-'>Święto Świętego Huberta! </a>
+		</li>
+						<li>
+		<a href='/blog/post/swieto-swietego-huberta-'>Święto Świętego Huberta! </a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Październik  2014</a>
+                        <ul>
+                        <li><a href='/blog/post/bal-mysliwski'>Bal Myśliwski</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/bal-mysliwski'>Bal Myśliwski</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Sierpień  2014</a>
+                        <ul>
+                        <li><a href='/blog/post/15-sierpnia'>15 sierpnia</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/15-sierpnia'>15 sierpnia</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Lipiec  2014</a>
+                        <ul>
+                        <li><a href='/blog/post/szkola-lesna-na-barbarce'>Szkoła Leśna na Barbarce</a>
+                        </li>
+                                               
+	                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Czerwiec  2014</a>
+                        <ul>
+                        <li><a href='/blog/post/prace-w-lowisku'>Prace w łowisku</a>
+                        </li>
+                                               
+	                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Maj  2014</a>
+                        <ul>
+                        <li><a href='/blog/post/strzelnica-dla-czlonkow-kola'>Strzelnica dla członków koła</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/walne-zgromadzenie-czlonkow-kola'>Walne Zgromadzenie członków koła</a>
+		</li>
+						<li>
+		<a href='/blog/post/prace-w-lowisku'>Prace w łowisku</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Kwiecień  2014</a>
+                        <ul>
+                        <li><a href='/blog/post/walne-zgromadzenie-czlonkow-kola'>Walne Zgromadzenie Członków Koła</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/prace-w-lowisku'>Prace w łowisku</a>
+		</li>
+						<li>
+		<a href='/blog/post/dyzury'>Dyżury</a>
+		</li>
+						<li>
+		<a href='/blog/post/swieta-wielkiej-nocy'>Święta Wielkiej Nocy</a>
+		</li>
+						<li>
+		<a href='/blog/post/aktualnosci'>Aktualności</a>
+		</li>
+						<li>
+		<a href='/blog/post/prace-w-lowisku'>Prace w łowisku</a>
+		</li>
+						<li>
+		<a href='/blog/post/prace-w-lowisku'>Prace w łowisku</a>
+		</li>
+						<li>
+		<a href='/blog/post/skladka-do-kola'>Składka do koła</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Marzec  2014</a>
+                        <ul>
+                        <li><a href='/blog/post/sadzenie-lasu'>Sadzenie lasu</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/sadzenia-lasu'>Sadzenia lasu</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Luty  2014</a>
+                        <ul>
+                        <li><a href='/blog/post/afrykanski-pomor-swin-u-dzikow'>Afrykański pomór świń u dzików</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/polowanie-na-bazanty'>Polowanie na bażanty</a>
+		</li>
+						<li>
+		<a href='/blog/post/dzien-dokarmiania-zwierzyny-lesnej'>Dzień Dokarmiania Zwierzyny Leśnej</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Styczeń  2014</a>
+                        <ul>
+                        <li><a href='/blog/post/bal-bali-po-balu'>Bal, bal...i po balu</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/noworoczny-bal-mysliwski'>Noworoczny Bal Myśliwski!</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Grudzień  2013</a>
+                        <ul>
+                        <li><a href='/blog/post/nowy-rok'>Nowy Rok!</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/swieta-bozego-narodzenia'>Święta Bożego Narodzenia</a>
+		</li>
+						<li>
+		<a href='/blog/post/wazne-'>Ważne! </a>
+		</li>
+						<li>
+		<a href='/blog/post/noworoczny-bal-mysliwski'>Noworoczny Bal Myśliwski!</a>
+		</li>
+				                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="" >Październik  2013</a>
+                        <ul>
+                        <li><a href='/blog/post/regulamin-polowa-zbiorowych'>Regulamin polowań zbiorowych</a>
+                        </li>
+                                               
+			<li>
+		<a href='/blog/post/finanse'>Finanse</a>
+		</li>
+						<li>
+		<a href='/blog/post/plan-polowa-zbiorowych'>Plan polowań zbiorowych</a>
+		</li>
+			
+
+</div>	
+</main>
+</div>
+
+<div class="wrapper row4 bgded overlay" style="background-image:url('http://77.55.211.142/themes/wt/img/03.png');">
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.6";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+<footer id="footer" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <div class="one_quarter first">
+      <h6 class="title">Działalność</h6>
+   <p>Uczestnictwo w okręgowych zawodach strzeleckich to stały element aktywności naszych członków. Sekcja strzelecka KŁ "Wieniec" to stali uczestnicy corocznych zawodów strzelectwa myśliwskiego.</p><p>Koło chętnie nawiązuje współpracę z organizacjami proekologicznymi a szczególnie z młodzieżą</p> </div>
+    <div class="one_quarter">
+      <h6 class="title">Kontakt</h6>
+   <div><i class="fa fa-map-marker"></i> Olek 1, 87-148 Łysomice</div><div><br></div><div><i class="fa fa-phone"></i> Prezes: 506-812-557</div><div>&nbsp; &nbsp; Łowczy: 608-243-998</div><div>&nbsp; &nbsp; Skarbnik: 600-394-008</div><div>&nbsp; &nbsp; Sekretarz: 606-932-290</div><div><br></div><div></div><div><i class="fa fa-at"></i> kontakt@wieniectorun.pl</div><div><br></div><div><i class="fab fa-facebook-square"></i>&nbsp;facebook.pl/wieniectorun</div>    <br></div>
+    <div class="one_quarter">
+      <h6 class="title">Linki</h6>
+   <p><a href="http://www.pzlow.pl" target="_blank">Polski Związek Łowiecki</a></p><p><a href="http://www.pzltorun.pl" target="_blank">Zarząd Okręgowy w Toruniu</a></p><p><a href="http://bip.bydgoszcz.kwp.policja.gov.pl/" target="_blank">KWP w Bydgoszczy</a></p>    </div>
+	<div class="one_quarter">
+      <h6 class="title">Nadchodzące wydarzenia</h6>
+   <p><br></p>    </div>
+</footer>
+</div>
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear">
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2018 - Wszelkie prawa zastrzeżone - <a href="#">wieniectorun.pl</a></p>
+    <p class="fl_right"><small>Powered by <a href="https://batflat.org/">Batflat</a>.</small></a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<script src="http://77.55.211.142/themes/wt/js/jquery.backtotop.js"></script>
+</body>
+</html>

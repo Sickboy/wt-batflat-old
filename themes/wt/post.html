@@ -81,7 +81,8 @@ div.treeview ul:first-child:before {
 .treeview li a {
     text-decoration: none;
     color:inherit;
-    
+    font-size: normal;
+    font-weight: normal;
     cursor:pointer;
 }
 .treeview li button, .treeview li button:active, .treeview li button:focus {
@@ -93,6 +94,7 @@ div.treeview ul:first-child:before {
     padding:0px 0px 0px 0px;
     outline: 0;
 }
+
 </style>
 <script>
 $.fn.extend({
@@ -149,7 +151,7 @@ $(window).on('load', function () {
 })
 </script>
 
-{if: $value.logon_only == 1}
+{if: $post.logon_only == 1}
 {if: $this->core->getUserInfo('username') != NULL}
 <div class="wrapper row3">
   <main class="hoc container clear">
@@ -170,8 +172,9 @@ $(window).on('load', function () {
                 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
         </div></div>
 {elseif: $this->core->getUserInfo('username') == NULL}
+<?php redirect('http://77.55.211.142/'); ?>
 {/if}
-{elseif: $value.logon_only == 0}
+{elseif: $post.logon_only == 0}
 <div class="wrapper row3">
   <main class="hoc container clear">
             <div class="three_quarter first">
@@ -212,13 +215,28 @@ $(window).on('load', function () {
 		{? $lm = date('m', $value.published_at) ?}
 	{/if}
 {else}
-	</ul></li></ul>
-	<ul class="treeview">
-	<li><a href="#">{?= sprintf($miesiac[date('m', $value.published_at)]) ?}  {?= sprintf(date('Y', $value.published_at)) ?}</a>
-	<ul>
-	<li><a href='/blog/post/{$value.slug}'>{$value.title}</a>
-	</li>
-	{? $lm = date('m', $value.published_at) ?}
+	{if: $value.logon_only == 1}
+                {if: $this->core->getUserInfo('username') != NULL}
+                        </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="{$iid}" >{?= sprintf($miesiac[date('m', $value.published_at)]) ?}  {?= sprintf(date('Y', $value.published_at)) ?}</a>
+                        <ul>
+                        <li><a href='/blog/post/{$value.slug}'>{$value.title}</a>
+                        </li>
+                        {? $lm = date('m', $value.published_at) ?}
+                        {? $iid = '' ?}
+                {/if}
+        {elseif: $value.logon_only == 0}
+                </ul></li></ul>
+                        <ul class="treeview">
+                        <li><a href="#" id="{$iid}" >{?= sprintf($miesiac[date('m', $value.published_at)]) ?}  {?= sprintf(date('Y', $value.published_at)) ?}</a>
+                        <ul>
+                        <li><a href='/blog/post/{$value.slug}'>{$value.title}</a>
+                        </li>
+                       {? $lm = date('m', $value.published_at) ?}
+                {? $iid = '' ?}
+        {/if}
+
 {/if}
 {/loop}
 
