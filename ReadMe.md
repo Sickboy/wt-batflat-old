@@ -6,7 +6,7 @@ https://batflat.org
 
 ## Install
 
-apt-get install apache2
-apt-get install php
-apt-get install php-dom php-gd php-mbstring php-pdo php-zip php-curl
+apt-get install apache2<br>
+apt-get install php<br>
+apt-get install php-dom php-gd php-mbstring php-pdo php-zip php-curl<br>
 
